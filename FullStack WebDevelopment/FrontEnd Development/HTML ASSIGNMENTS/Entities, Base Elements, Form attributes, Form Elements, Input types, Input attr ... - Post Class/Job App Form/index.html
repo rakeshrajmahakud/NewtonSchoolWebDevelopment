@@ -1,0 +1,58 @@
+<!-- Job App Form
+Make a job app form having fields Name*, Email*, Gender* (radio), Laptop Brands(options : [Apple, Asus, HP]), Age*, DOB*, Password* & submit button.
+
+Also, Take input from the users where they can paste the website URL of their portfolio. The input element must have portfolio as id
+
+Instructions: * are required fields,
+Use method attribute value that you should use in this case for the form!
+
+The respective input elements for the mentioned fields should have ids
+#name, #email, #password, #age, #dob
+
+The element for selecting laptop brand should have id #laptop
+
+The radio buttons for gender should have name atrribute as gender.
+
+
+All input elements must also have corresponding labels with for attribute set to id's of element they belong to.
+Example label for input of name will be <label for="name"> Name</label> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" value="Name" required><br>
+    <label for="email">Email</label>
+    <input type="email" id="email" value="Email" placeholder="Email" required><br>
+    <label for="male">Male</label>
+    <input type="radio"id="male" name="gender" required><br>
+    <label for="Female">Female</label>
+    <input type="radio"id="Female" name="gender" required><br>
+    <label for="laptop">Laptop Brands</label>
+    <select name="Laptop Brands" id="laptop"><br>
+        <option value="Apple">Apple</option>
+        <option value="Asus">Asus</option>
+        <option value="HP">HP</option>
+    </select><br>
+    <label for="age">Age</label>
+    <input type="number" id="age"  required><br>
+    <label for="dob">DOB</label>
+    <input type="date" id="dob" required><br>
+    <label for="password" required>Password</label>
+    <input type="password" id="password" required><br>
+    <label for="portfolio">URL</label>
+    <input type="url" id="portfolio">
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
