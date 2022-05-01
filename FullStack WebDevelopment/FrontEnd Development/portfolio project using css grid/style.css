@@ -1,0 +1,152 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: block;
+}
+.main-content{
+    display: grid;
+    min-height: 1000px;
+    grid-template-columns: 300px 900px;
+    background-color: rgb(221, 129, 129);
+    width: 90%;
+    margin: 20px auto;
+}
+
+.left-section{
+    background-color: crimson;
+
+}
+
+
+.left-content{
+    padding: 1rem;
+
+}
+.profile-image{
+    display: block;
+    margin: auto;
+    border: 5px white solid;
+    border-radius: 30%;
+    width: 60%;
+   
+}
+.name{
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.02px;
+    padding: 0.8rem;
+    color: white;
+}
+.designation{
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    color: white;
+}
+
+.description{
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+
+.social-media{
+    display: flex;
+    justify-content:space-around;
+
+}
+.skill-item{
+    padding-bottom: 0.5rem;
+}
+.skill-content{
+    letter-spacing: 0.02px;
+    padding: 0.8rem;
+}
+.skill-name-list{
+    color: white;
+}
+
+
+
+
+.skills{
+    font-size: 00.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 0.5rem;
+}
+.skill-name{
+    font-size: 0.65rem;
+    font-weight: 0.65rem;
+    text-align: left;
+    padding-bottom: 0.5rem;
+}
+.progress-bar{
+    border: 1px white solid;
+    height: 4px;
+    background-color: white;
+
+}
+
+.right-section{
+    background-color: rgb(198, 158, 236);
+}
+
+.right-main-content{
+    padding: 2rem 3rem;
+    background-color: rgb(221, 129, 129);
+}
+.right-title{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.para{
+    word-wrap: break-word;
+    word-break: break-all;
+    padding-left: 0.5rem;
+}
+.right-content-title{
+    padding-left: 0.5rem;
+}
+button{
+    background-color: rgb(221, 129, 129);
+    padding: 5px 9px;
+    border-radius: 30px;
+
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 700;
+}
+/* // for responsiveness // */
+@media screen and (max-width:630px){
+    .main-content{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media screen and (max-width:673px){
+    .main-content{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media screen and (min-width:1000px){
+    .main-content{
+        grid-template-columns: 200px 700px
+    }
+}
