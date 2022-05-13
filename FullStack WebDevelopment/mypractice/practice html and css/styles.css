@@ -1,0 +1,170 @@
+/* this is an universial selector */
+/* *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+} */
+
+p {
+    text-align: center;
+    color: aqua;
+}
+
+#idselector{
+    color: green;
+}
+.classselector{
+    background-color: blue;
+}
+
+span.classselector{
+    border: 2px solid red;
+    text-align: center;
+    margin-left: 300px;
+}
+
+/* css grouping selector */
+h1,h2,h3{
+    color: blueviolet;
+}
+
+/* decendent selector (space) */
+div p{
+    background-color: chartreuse;
+    color: black;
+}
+/* child selector (>) */
+.container > p{
+    background-color: darkolivegreen;
+}
+/* adjacent sibling selector */
+/*The adjacent sibling selector is used to select an element that is directly after another specific element.*/
+.container + p{
+    border: 5px solid red;
+}
+
+/* General Sibling Selector (~) */
+/* The general sibling selector selects all elements that are siblings of a specified element. */
+.container2 ~ h5{
+    background-color: indigo;
+}
+
+/* CSS Pseudo-classes (:) */
+button{
+    margin: 50px;
+    padding: 5px 10px;
+    border-radius: 15%;
+    color: black;
+    background-color: aqua;
+    
+}
+button:hover{
+    font-weight: 700;
+    background-color: rgb(4, 113, 113);
+    color: white;
+}
+
+/* CSS Pseudo-elements */
+
+.text::first-line{
+    color: black;
+    font-variant: small-caps;
+}
+
+/* CSS [attribute="value"] Selector */
+a[target="_blank"] {
+    background-color: yellow;
+
+}
+/* box model */
+.boxmodel{
+    height: 50px;
+    width: 50px;
+    margin: 50px;
+    padding: 50px;
+    border: 2px solid crimson;
+    background-color: bisque;
+}
+
+/* ------------------------------------------ */
+/* css animation */
+
+.animation-main{
+    width: 400px;
+    height: 200px;
+    background-color: antiquewhite;
+    margin: 100px 0 100px 300px;
+    /* display: flex;
+    align-items: center; */
+
+}
+.child-1{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 50%;
+    animation: linear infinite;
+    animation-name: anime;
+    animation-duration: 4s;
+    
+    
+
+}
+
+
+@keyframes anime{
+    0% {background-color: blue;}
+    50% {background-color: yellow;}
+    100% {background-color: blue;}
+}
+
+@-webkit-keyframes movediv{
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 50%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+
+/* flex box */
+.flexxx{
+   margin-top: 200px;
+   margin-bottom: 200px;
+   margin-left: 200px;
+   margin-right: 50px;
+   height: 300px;
+   width: 400px;
+    background-color:rgb(177, 108, 16);
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    align-content: stretch;
+    /* flex-basis: auto; */
+    /* flex-direction: column; */
+
+    /* The flex-flow property is a shorthand property to set both flex-direction and flex-wrap. */
+    /* flex-flow: row-reverse wrap; */
+    /* flex-direction: row-reverse; */
+    flex-wrap:wrap;
+    
+
+
+
+}
+.child{
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+    
+}
+
+/* The flex property is a shorthand property for flex-grow, flex-shrink, and flex-basis properties. */
+.two{
+   flex-basis: 200px; 
+}

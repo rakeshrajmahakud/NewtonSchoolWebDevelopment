@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(4, 0, 33);
+    display :flex;
+    justify-content:center;
+    
+}
+.main-container{
+    height:200px;
+    width: 200px;
+    border: 4px dotted rgb(82, 0, 111);
+    display: grid;
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    /* alsp there is a shorthand properties  to write the values  */
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: 25% 25% 25% 25%;
+    
+}
+.box{
+/*     height: 60px;
+    width: 60px; */
+    /* border-radius: 25%; */
+    display: flex;
+    border: 3px solid white;
+    align-items: center;
+    justify-content: center;
+}
+.box-1{
+    background-color: red;
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+    /* short hand for grid row and grd column  */
+    /* grid-column: 2/4;     /*here devide symbols used for separate start and end value */
+    
+    /* grid-row: 4/5; 
+    grid-column: 2/3; */
+
+    /* also there is a short hand properties for both grid column and grid row called grid area */
+    /* here the first values are like row start,column start,row end ,column end */
+    /* grid-area: 1/1/3/5;  */
+    
+}
+.box-2{
+    background-color: rgb(255, 0, 242);
+    /* order: 0; */
+}
+.box-3{
+    background-color: rgb(0, 251, 255);
+}
+.box-4{
+    background-color: rgb(0, 255, 81);
+} 
+
+.bap{
+   margin: 50px;
+   padding: 50px;
+    border: 2px solid red;
+    background-color: bisque;
+}

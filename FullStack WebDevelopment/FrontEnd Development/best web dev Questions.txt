@@ -1,0 +1,285 @@
+Who and why maintain web standards ?
+
+The W3C is the best known web standards body,
+WHATWG (who maintain the living standards for the HTML language),
+ECMA (who publish the standard for ECMAScript, which JavaScript is based on),
+Khronos (who publish technologies for 3D graphics, such as WebGL), 
+and others.
+
+what is don't break the web ?
+
+the idea is that any new web technology that is introduced should be backwards compatible
+with what went before it (i.e. old web sites will still continue to work), and forwards
+compatible (future technologies in turn will be compatible with what we currently have).
+As you go through the learning material presented here, you'll start to learn how this 
+is made possible with some very clever design and implementation work.
+
+what is world wide web ?
+
+The World Wide Web (WWW) is combination of all resources and users on the Internet that
+are using the Hypertext Transfer Protocol (HTTP).
+
+Who manages the World Wide Web?
+
+The World Wide Web Consortium (W3C) is an international community where Member organizations,
+a full-time staff, and the public work together to develop Web standards.
+Led by Web inventor and Director Tim Berners-Lee and CEO Jeffrey Jaffe,
+W3C's mission is to lead the Web to its full potential.
+
+what happen if we miss docktype ?
+
+The browser enters Quirks mode and tries to deal with your code as if it was written in the late 90’s.
+This means they will imitate many bugs that existed in the old browsers.
+It is not consistent on how to do this (so you will get significantly different results,for example,
+from Firefox to Internet Explorer). The purpose of DOCTYPE is to tell the browser what type of HTML you are writing.
+It is not valid to omit the DOCTYPE. There is no “Standard” format. The browser will just try to parse HTML as best it can.
+But not all elements will be displayed correctly. DOCTYPE is a required part of all HTML documents.
+In HTML5 the tag used is: <! DOCTYPE html>
+
+
+What happen when you hit url in browser ?
+https://www.freecodecamp.org/news/what-happens-when-you-hit-url-in-your-browser/
+
+What are the different types of DNS server?
+All DNS servers fall into one of four categories: Recursive resolvers, root nameservers, TLD nameservers,
+and authoritative nameservers. In a typical DNS lookup (when there is no caching in play),
+these four DNS servers work together in harmony to complete the task of delivering the IP address for a 
+specified domain to the client (the client is usually a stub resolver - a simple resolver built into an operating system).
+
+https://www.cloudflare.com/en-in/learning/dns/dns-server-types/
+
+Do I Really Need “WWW” in My URL?
+https://hover.blog/do-i-need-www-in-my-url/
+
+All about dns ?
+https://www.cloudflare.com/en-in/learning/dns/what-is-dns/
+
+how to change compiter dns address ?
+https://www.computerhope.com/issues/ch001161.htm
+
+what is dns resolver ?
+https://www.computerhope.com/jargon/d/dns-resolver.htm
+
+features of html5 ?
+-video and audio
+-nav
+-header and footer
+-canvas
+input tags -- contenteditable attribute
+           -- progress tag
+-section
+-main
+-figure and figcaption
+-Placeholder
+-required attrbute
+
+What are HTML attributes?
+HTML attributes are a modifier of an HTML element type. An attribute either modifies the default functionality of
+an element type or provides functionality to certain element types unable to function correctly without them.
+In HTML syntax, an attribute is added to an HTML start tag.
+	   
+What is the Datalist element?
+The <datalist> HTML element contains a set of <option> elements that represent the permissible or recommended
+options available to choose from within other controls
+
+What is difference between select and Datalist?
+
+               <select> tag                                     	<datalist> tag
+The user can be restricted to a list of options.	 The user is not restricted by the list of options.
+It doesn't provide the auto-complete feature.	         It provides the auto-complete feature.
+
+what is box model ?
+In CSS, the term "box model" is used when talking about design and layout.
+The CSS box model is essentially a box that wraps around every HTML element.
+The CSS box model is a container that contains multiple properties including borders, margin, padding, and the content itself.
+
+What is position Property ?
+The position property specifies the type of positioning method used for an element.
+There are five different position values:
+-static
+-relative
+-fixed
+-absolute
+-sticky
+
+Apply diff background color for even row  in a table?
+ tr:nth-child(even) {
+            background-color: Lightgreen;
+        }
+
+
+what are pseudo elements and classes ?
+Pseudo-Class
+A pseudo-class represents a state of a selector like :hover, :active, :last-child,etc. These start with a single colon(:).
+The syntax of CSS pseudo-class is as follows −
+
+:pseudo-class{
+   attribute: /*value*/
+}
+
+Pseudo-Element
+Similarly, a pseudo-element is used to select virtual elements like ::after, ::before, ::first-line, etc.
+These start with a double colon(::).
+The syntax of CSS pseudo-element is as follows −
+
+::pseudo-element{
+   attribute: /*value*/
+}
+
+difference between margin and padding ?
+a margin is the space around an element's border, while padding is the space between an element's border and the element's content.
+Put another way, the margin property controls the space outside an element, and the padding property controls the space inside an element
+
+
+the vw (view-width) and vh (view-height) units are relational to the view-port size, where 100vw or vh is 100% of the view-port's width/height. For example, 
+if a view-port is 1600px wide,and you specify something as being 2vw, that will be the equivalent of 2% of the view-port width, or 32px.
+
+what are the units in html ? 
+absolute units
+points (1pt = 1/72 of 1in) 
+px: pixels
+cm:centemeter
+in:inch
+pc:picas(1pc = 12 pt) 
+Relative Units
+EM: Relative to the parent element
+REM: Relative to the root element (HTML tag)
+%: Relative to the parent element
+VW: Relative to the viewport’s width
+VH: Relative to the viewport’s height
+While PX, EM, and REM are primarily used for font sizing, %, VW, and VH are mostly used for margins, padding, spacing, and widths/heights.
+
+what is onload in html ?
+In JavaScript, this event can apply to launch a particular function when the page is fully loaded.
+It can also be used to verify the type and version of the visitor's browser. We can check what cookies a page uses by using the onload attribute.
+In HTML, the onload attribute fires when an object has been loaded. The purpose of this attribute is to execute a script when the associated element loads.
+In HTML, the onload attribute is generally used with the <body> element to execute a script once the content (including CSS files, images, scripts, etc.)
+of the webpage is completely loaded. It is not necessary to use it only with <body> tag, as it can be used with other HTML elements.
+
+what is window object ?
+The window object represents an open window in a browser. If a document contain frames (<iframe> tags), 
+the browser creates one window object for the HTML document, and one additional window object for each frame.
+
+
+what is DOM ?
+The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an XML or HTML document as a tree structure
+wherein each node is an object representing a part of the document. The DOM represents a document with a logical tree.
+The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure,
+style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+
+what is CSSOM ?
+The CSS Object Model is a set of APIs allowing the manipulation of CSS from JavaScript. It is much like the DOM, but for the CSS rather than the HTML.
+It allows users to read and modify CSS style dynamically. The values of CSS are represented untyped, that is using String objects.
+
+what is hoisting in javascript ?
+In JavaScript, Hoisting is the default behavior of moving all the declarations at the top of the scope before code execution. Basically, 
+it gives us an advantage that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local. 
+It allows us to call functions before even writing them in our code. 
+Note: JavaScript only hoists declarations, not the initializations.
+JavaScript allocates memory for all variables and functions defined in the program before execution.
+Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+Variables defined with let and const are hoisted to the top of the block, but not initialized.
+Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
+Using a let variable before it is declared will result in a ReferenceError.
+The variable is in a "temporal dead zone" from the start of the block until it is declared:
+
+WHAT IS HOISTING ? ONE LINE ANS ?
+Hoisting in JavaScript is a behavior in which a function or a variable can be used before declaration.
+
+what is meter tag in html ?
+The <meter> tag defines a scalar measurement within a known range, or a fractional value. This is also known as a gauge.
+
+what is a sementic tag in html ?
+A semantic element clearly describes its meaning to both the browser and the developer.
+Examples of non-semantic elements: <div> and <span> - Tells nothing about its content. Examples of semantic elements: <form> , <table> , and <article> - Clearly defines its content.
+
+Describe the difference between a cookie, sessionStorage and localStorage?
+For most cases, we use the localStorage object if we want some data to be on the browser.
+If we want it on the server, then we use cookies, and the sessionStorage is used when we want to destroy the data whenever that specific tab gets closed or the season is closed by the user.
+>>The main features of localStorage are:
+Shared between all tabs and windows from the same origin.
+The data does not expire. It remains after the browser restart and even OS reboot.
+>>The main features of localStorage are:
+The sessionStorage exists only within the current browser tab.
+Another tab with the same page will have a different storage.
+But it is shared between iframes in the same tab (assuming they come from the same origin).
+The data survives page refresh, but not closing/opening the tab.
+>>Both storage objects provide same methods and properties:
+setItem(key, value) – store key/value pair.
+getItem(key) – get the value by key.
+removeItem(key) – remove the key with its value.
+clear() – delete everything.
+key(index) – get the key on a given position.
+length – the number of stored items.
+
+the size of the local session and coosies ?
+The storage capacity of local storage is 5MB/10MB	
+The storage capacity of session storage is 5MB	
+The storage capacity of Cookies is 4KB
+
+All about cookies ,session storage,localstorage ?
+https://javascript.info/localstorage
+
+All about cookies ,session storage,localstorage ?
+https://www.xenonstack.com/insights/local-vs-session-storage-vs-cookie
+
+
+
+
+Why don't we use www anymore to search websites?
+
+Everybody is mixing various informations without really understanding the use and abandon of www.
+Here’s what I think to be the complete story, even if I’m not a technician of the world wide web consorsium.
+I simply used induction (reverse of deduction) to help me to figure out how things happened.
+
+TYPES OF FILES, PROTOCOLS, AND TECHNICS IN URL
+
+Firstly, Internet was not about seing pages: it was about sharing file system structures and e-mails. So, behind those to “types” of files,
+a protocol was used : FTP for file structure, and POP for emails (or an other ancestor).
+Then, in order to access those files, two technics were invented :
+
+- The first one consists in using a sub-domain. Domains and sub-domains work like this : the first level is on the right, and each sub-levels are added on the left. So, all you had to do was to add “ftp.” or “mail.” on the very left of the URL to specify the virtual separation of those different types of files on a domain, in order to trigger a “protocol” that would be used to read and transmit them.
+
+- The second technic was to add a header to the URL to explicitely specify the protocol, separately from the rest of the URL, like “ftp://”. It was historically preferred, as it makes the reading of the URL more easy to undestand.
+
+But the possible overlap of the two technics with delay between implementations of one or the other, is possibly adding to the mystery of how things got complicated and blurry.
+
+ARRIVING OF A NEW LANGUAGE TO READ DISTANT CONTENTS
+
+One famous day (hurray!) came the idea to directly see the content of readable files, instead of just listing them. A language was invented, named HTML as for Hyper Text Markup Language, and a corresponding protocol named HTTP as for Hyper Text Transfert Protocol. The idea was to create a “web” of data around the world. So, as a sub-domain name corresponding to that protocol, “http” was created, that could be used in the first technic (URL part). But as the concept of “world wide web” became more and more famous, a second sub-domain was invented to illustrate that great idea : “www”. As a matter of fact, you can also use “http” as a part of the URL, as for exemple “http.yoursite.stuff” : it will work, this confirming that my story about sub-domain and protocol technics [possible] delay is probably true.
+
+I don’t know exactly how nor when things got done, but wether the two were created at the same time or not doesn’t change the general idea.
+
+Now, for the first technic, you had the possibility to use “http.” or “www.” followed by your domain name and the TDL (top domain level) like “.com”. Or, as a second technic to explicitely specifiy the protocol and render a more beautiful URL, you could add “http://” before the URL.
+
+MIXED USE OF TECHNICS IN URL
+
+So, everybody started trying “http://” in front of URL, as it was beautifying URLs. But as habits were deeply inlaid in our minds, and because the name of the protocol (http) was not the same as the sub-domain name preferred for it (www), while ftp or mail were kep in both applications, people kept using “www” in the URL, convinced that it has an absolute role when in fact it was offered to use one technic (http://) or the other (http. or www.).
+
+BEHIND THE SCENE
+
+Servers kept having the need to process URLs parts, and to check that the leftest part of the URL was or wasn’t indicating a protocol to use (www. , ftp. , etc). And this was (and still is) done independently from the explicite header of a protocol to transfert the URL with the web browser (http://, ftp://, etc).
+
+Because, if for instance you type “http://ftp.yourdomain.com”, the “ftp.” part is probably an error, and if not, it is simply a real part of your host adress : so the servers HAVE to process things independently, and CANNOT skip the verification process.
+
+BEAUTIFYING OF THE URL
+
+As web browsers tended to be vastly used for HTML purpose (the “web”), our web browsers finally came to a point where they hid the “http://” in front or URLs for us to be comfortable with the URL part without being disturbed. This leading to a strange feeling reinforcing the idea that we need “www” as a part of URLs.
+
+BEHIND THE SCENE #2
+
+Servers were still processing all kind of checkings of what is transmitted in URLs and various parameters that we aren’t even conscious of. Nothing never changed in the “host servers” : they were mainly used for HTML (and now PHP and other dynamic languages), and thus, URL parsing was still taking into account the possibility to use www or not if the header is specifying HTTP as a protocol.
+
+But the fact is that if for some reason they were NOT doing the job of “implementing” the “www” as a non-obligatory part of the URL (or any other conflicting rule), they were failing to deliver the content, and despite the use of a header to specify the HTTP protocol, requests arriving to a domain were simply dying and returning an error.
+
+“Why would people do such a stupid thing ?” would you say. Well, probably because they were thinking “arf, www is not useful anymore, let’s delete it”. Or a more probable and realist cause, is that a kind of contradiction in the rule appeared, were domain providers were trying to separate “www.yourdomain.com” from “yourdomain.com”, as if it would add an interest in the taxonomy, without finishing the job to process the HTTP correctly without the absolute presence of www in the URLs.
+
+I personally suspect the blurry about historical uses and obligations, in the evolution of the programmation habits itself, to be the responsible for that annoying but minor confusion.
+
+DISAPPEARING OF WWW
+
+Progressively, given that “http://” was always added in front or URLs typed in the browsers,
+and because treatment of“www” was correclty done,the use of “www” became less and less necessary and thus popular as part of URL.
+Developpers slowly became conscious of the possibility to give URL of their work without the “www” part,and webusers themselves,
+seing more and more of those websites without www, became conscious that they could skip it,
+helped by their natural lazyness wich was fortunately harmonized with the whole logic.
