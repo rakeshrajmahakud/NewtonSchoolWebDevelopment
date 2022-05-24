@@ -1,0 +1,124 @@
+What is a webpage?
+A web page is a hypertext document on the World Wide Web.
+Web pages are delivered by a web server to the user and displayed in a web browser.
+A website consists of many web pages linked together under a common domain name.
+The name "web page" is a metaphor of paper pages bound together into a book.
+
+
+ How to create a good webpage? 
+Create a sample page that needs to have two separate sections
+
+Mock Full Stack 1 -> Easy Level
+
+What are the new FORM elements which are available in HTML5? 
+There are five new form elements in the HTML5 forms specification: datalist , output , keygen , progress , and meter
+
+
+what is the diff between meter and progress ?
+The progress element represents the completion progress of a task.
+The meter element represents a scalar measurement within a known range, or a fractional value
+
+What is the difference between HTML elements tags and attributes ?
+HTML Tags:-                                                                                                                                              
+HTML tags are used to hold the HTML element.	                                      	                                                 
+HTML tag starts with < and ends with >	                                              	                        
+HTML tags are almost like keywords where every single tag has unique meaning.	     	                                 
+HTML Elements:--
+HTML element holds the content.
+Whatever written within a HTML tag are HTML elements.
+HTML elements specifies the general content.
+HTML Attributes:--
+HTML attributes are used to describe the characteristic of an HTML element in detail.
+HTML attributes are found only in the starting tag.
+HTML attributes specify various additional properties to the existing HTML element.
+
+
+What is JavaScript hoisting? 
+What is promises in JavaScript? 
+Write a program in JavaScript to check if a string is palindrome or not
+
+
+Mock Full Stack-> Easy Level
+
+What do you understand by Js? [Answered] 
+In how many ways can we position an element ?[Answered] 
+Difference between display:none and visibiliy:hidden. [Partially Answered]
+What is DOM? [Partially Answered] 
+1 advantages and 1 disadvantage of Css.[Partially Answered] 
+What is Css box model? [Answered] 
+What is the difference between margin and border?[Answered]
+What are pseudo classes?.[Partially Answered]  
+Difference between let,var and const. .[Partially Answered] 
+What is temporal dead zone?.[Not Answered] 
+Explain closures with an example.[Partially Answered] 
+Explain hoisting with an example [Partially Answered] 
+
+Coding
+Create 3 button and display them on the center of the web page. 
+Click on 1 button to increase counter. Click on another to decrease the counter. Click on reset button to reset the counter to 0.
+
+
+
+
+
+
+Full Stack 1-> Challenege Level
+
+
+
+1. Given a String decompress it,
+input -- 
+ a2b3c4def2
+output -- 
+aabbbccccdeff  
+2. first non repeating element in an array.
+input -
+1 2 3 4 2 1 7 8
+output - 
+3  
+
+3. var user_list= [ {USER:"bob", SCORE:2000, TIME:32, AGE:16, COUNTRY:"US"}, {USER:"jane", SCORE:4000, TIME:35, AGE:16, COUNTRY:"DE"}, {USER:"tim", SCORE:1000, TIME:30, AGE:17, COUNTRY:"UK"}, {USER:"mary", SCORE:1500, TIME:31, AGE:19, COUNTRY:"PL"}, {USER:"joe", SCORE:2500, TIME:33, AGE:18, COUNTRY:"US"}, {USER:"sally", SCORE:2000, TIME:30, AGE:16, COUNTRY:"CA"}, {USER:"yuri", SCORE:3000, TIME:34, AGE:19, COUNTRY:"RU"}, {USER:"anita", SCORE:2500, TIME:32, AGE:17, COUNTRY:"LV"}, {USER:"mark", SCORE:2000, TIME:30, AGE:18, COUNTRY:"DE"}, {USER:"amy", SCORE:1500, TIME:29, AGE:19, COUNTRY:"UK"} ];
+sort this user list by age
+
+
+
+Full Stack -> Medium Level
+
+1. high order function -- explained with example
+2. callback function and callback hell --explained
+3. difference between sync and async call -- answered
+4. what is a promise and basic structure of a promise -- answered
+5. css selector and types of css selector -- answered
+6. css flex usage -- answered
+7. create a product form which will take product name, product description, cost price and discount and it should display the selling price
+
+
+
+Full Stack Mock  1-> Hard Level
+
+1. Asynchronous call -- answered with real time example
+2. Javascript promise -- answered a bit
+3. call back function in JS --  answered with example
+4. localStorage and sessionStorage -- answered a bit
+5. rest parameter and spread operator -- answered rest parameter with example 
+6. Guess the output --
+
+console.log(1>2>3); 
+console.log(3>2>1);
+
+function foo() {
+  let a = b = 0;
+  a++;
+  return a;
+}
+foo();
+typeof a;
+typeof b;
+7. create a product form which will take product name, product description, cost price and discount and calculate the discounted price
+
+Mock Full Stack 1 -> Medium Level
+
+1.Create a box with some background color using html and css. 
+2.Centre the box horizontally and vertically. 
+3.Create a form using html, css, javascript which contains input tags like radio, text, password, email, number, button with js validation
+

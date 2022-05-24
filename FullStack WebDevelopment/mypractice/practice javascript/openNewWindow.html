@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open a new window through javascript event</title>
+</head>
+<script>
+    let m,s;
+    function openwin() {
+        // m = window.open("https://www.g24hub.com");
+       s =  window.open("https://www.facebook.com","width=500px","height=500px");
+    }
+    function closewin() {
+        //   window.close(m);
+          window.close(s);
+
+    }
+</script>
+
+<body>
+    <button onclick="openwin()">open window</button>
+    <button onclick="closewin()">close window</button>
+
+
+</body>
+</html>

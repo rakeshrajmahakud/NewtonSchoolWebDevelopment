@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Form Validation</title> 
+</head>
+<body>
+
+    <!-- 
+username, useremail, password, gender
+
+dob.
+
+address
+
+ -->
+    <div class="container">
+        <form action="">
+            <label for="text">User Name</label><br>
+            <input type="text" name="text" placeholder="Enter your name " required><br>
+        
+            <label for="email">User Email</label><br>
+            <input type="email" name="email" placeholder="Enter mail id here" required><br>
+           
+            <label for="password">Enter Password</label><br>
+            <input type="password" placeholder="Enter your password" required><br>
+            
+
+            <label for="gemder">Gender:</label><br>
+            Male:<input type="radio" name="gender">
+            Female:<input type="radio" name="gender"><br>
+
+            <label for="date">Choose Date of Birth</label><br>
+            <input type="date" name="date"><br>
+
+            <label for="address">Enter address Here</label><br>
+            <textarea name="address" id="textarea" cols="20" rows="5"></textarea><br>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+</body>
+</html>

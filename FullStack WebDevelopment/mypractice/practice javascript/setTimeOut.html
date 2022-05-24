@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="display()">Try It</button>
+
+<script>
+// The setTimeout() method calls a function after a number of milliseconds.
+// 1 second = 1000 milliseconds.
+// Notes
+// The setTimeout() is executed only once.
+// If you need repeated executions, use setInterval() instead.
+// Use the clearTimeout() method to prevent the function from starting.
+// To clear a timeout, use the id returned from setTimeout():
+// myTimeout = setTimeout(function, milliseconds);
+// Then you can to stop the execution by calling clearTimeout():
+
+clearTimeout(myTimeout);
+        function display() {
+            setTimeout(()=>{
+                alert("heloooo bhailog!!!!!!!!!!!!!!!!!!!!!!")
+            },2000)}          //this code will be execute after 2sec. here  2sec = 2000
+    </script>
+</body>
+</html>

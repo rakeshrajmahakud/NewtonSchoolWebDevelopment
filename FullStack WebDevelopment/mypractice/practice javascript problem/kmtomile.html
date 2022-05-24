@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="km">Enter the km value</label>
+    <input type="number" id="km" >
+    <h1 id="converted">In miles : </h1>
+    <button type="submit"  onclick="convert()">Convert</button>
+
+
+
+
+<script type="text/javascript">
+    
+    function convert(){
+        let kms = document.getElementById("km").value;
+        const factor =  0.621371;
+        miles = kms * factor;
+        document.getElementById("converted").innerHTML = `In miles : ${miles}`;
+
+    }
+</script>
+</body>
+</html>

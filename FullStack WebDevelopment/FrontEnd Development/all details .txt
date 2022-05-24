@@ -1,5 +1,0 @@
-what is utf-8 and why we write utf-8 in html header file ?
-https://blog.hubspot.com/website/what-is-utf-8
-https://deliciousbrains.com/how-unicode-works/
-https://unicode.org/emoji/charts/full-emoji-list.html
-

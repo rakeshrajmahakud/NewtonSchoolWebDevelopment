@@ -55,19 +55,39 @@
   //////////////////////////////////////////////
   // here we are just immediate invoking the javascript function 
   // uses the second "()" for call the returned function
-(function(){
-  console.log("hello world");
-  return function(){
-    console.log("hii");
-  }
-})()();
+// (function(){
+//   console.log("hello world");
+//   return function(){
+//     console.log("hii");
+//   }
+// })()();
 
 //we can do same thing by using fat arrow function
 
-(()=>{
-  console.log("i am from arrow function");
-})();
+// (()=>{
+//   console.log("i am from arrow function");
+// })();
 
-(async()=>{
-  console.log("i am from async function");
-})();
+// (async()=>{
+//   console.log("i am from async function");
+// })();
+
+
+
+
+
+
+// ------------------------------------------
+// function myfunc(data) {
+//   document.getElementById("demo").innerHTML =data;
+// }
+
+// function mainfunction(value,callback) {
+//       let x = value *2;
+//       callback(x);
+// }
+
+// mainfunction(10,myfunc);
+
+
+

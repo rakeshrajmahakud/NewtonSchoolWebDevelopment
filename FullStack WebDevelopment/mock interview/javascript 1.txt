@@ -1,0 +1,173 @@
+What is a Promise?
+A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
+
+What's The Difference Between Async & Defer?
+async and defer both load JavaScript asynchronously without render blocking,
+but async executes as soon as possible while defer runs in sequence toward the end of the loading process, just before the DOMContentLoaded event.
+Async:
+Downloads in the background at a low priority (same as defer)
+Can interrupt page rendering to execute
+Executes as soon as possible and in no particular order
+Defer:
+Downloads in the background at a low priority (same as async)
+Won't interrupt page rendering to execute
+Executes in sequence just before the DOMContentLoaded event
+
+### what is event deligation ?
+- Event Delegation is basically a pattern to handle events efficiently. Instead of adding an event listener to each and every similar element, we can add an event listener to a parent element and call an event on a particular target using the .target property of the event object.  
+Let’s see an example with and without event delegation
+
+
+10. What is DOM in Javascript? 
+ DOM stands for Document Object Model. DOM is used when we interact with web pages. Whenever a web page is loaded, the browser creates a Document Object Model of the page. Using DOM, we can manipulate and create different elements inside an HTML document. 
+ It gives Javascript the ability to make any change in HTML elements and attributes on the page. Not only can we modify but also create, add or delete HTML elements and attributes. DOM also gives Javascript the power to change the styling, i.e, the CSS styles of the page. 
+
+
+Is Javascript important from an interview point of view?
+Yes, Javascript is one of the most in demand skills in the IT industry today. Anyone who aims to become a developer in any tech firm should know Javascript. Companies like Microsoft, Uber, KPMG, and SAP frequently ask questions on Javascript.
+
+Which language is best for coding?
+Just because this article focuses on Javascript, don’t expect me to write that it is best for coding. There is no one language that one can say is best at coding. It is not the language, it is you who should be good at coding. Just focus on one language and learn all its concepts. Don’t focus on language, focus on developing your programming skills. No company demands you to learn a specific language for their interview.
+
+Is Javascript good for coding interviews?
+As mentioned before, no language is bad for coding interviews. So yes, if you like coding in
+Javascript and want to give an interview in this language, it is as perfect as any other language.
+
+Key Takeaways
+These are just the basic set of Javascript interview questions that are generally asked every time. Some of the TopTech companies like IBM, eBay, Microsoft, SAP and Dassault have asked these questions in their interviews. These are some of the must-know questions and understanding them lays a strong foundation for us when we proceed to answer advanced level questions. 
+
+Javascript is an interesting language and could be so much fun to learn from the start. This is one language that you can start applying to your college projects as soon as you learn the basics and see the results in the form of beautiful websites or apps or video games! 
+
+
+
+Javascript questions ?
+Q1: What are global variables in JavaScript?
+Global variables are the variables that are available throughout the code.
+
+If we create a variable without the var keyword then it becomes a global variable.
+
+Q2: What is the this keyword in JavaScript?
+The this keyword is used to refer to the object from where it is called.
+
+Q3: What is the use of "use strict"; in JavaScript?
+The "use strict"; in JavaScript is used to execute the code in strict mode.
+
+So, for example in strict mode we can't use undeclared variables.
+
+ 
+"use strict"; is a literal expression and not a statement and is ignored by older JavaScript versions.
+
+Q4: What is setTimeout in JavaScript?
+The setTimeout function executes a function after a given delay.
+
+In the following example we will get "Hello World" message in the browser console after 5000ms (milliseconds) delay.
+
+setTimeout(function() {
+  console.log('Hello World');
+}, 5000)
+Q5: What is setInterval in JavaScript?
+The setInterval function is used to execute a function repeatedly after a given delay. The execution stops only when we stop the timer using the clearInterval function.
+
+In the following example we will get "Hello World" after every 3 seconds (3000ms) for 5 times.
+
+ 
+var count = 0;
+var t = setInterval(function() {
+  console.log('Hello World');
+  count++;
+  if (count === 5) {
+    clearInterval(t);
+    console.log('End');
+  }
+}, 3000);
+Q6: What is the difference between View state and Session state?
+View state is specific to a page in a session. Whereas, Session state is specific to a user or browser session and is accessible from all pages.
+
+Q7: What are the different loop structure available in JavaScript?
+Following are the loop structure available in JavaScript.
+
+while
+do-while
+for
+Q8: Write JavaScript code to print individual characters of a given string 'Hello World' in the browser console.
+var str = 'Hello World';
+for (var i = 0, len = str.length; i < len; i++) {
+  console.log(str[i]);
+}
+Q9: What is the output for the following JavaScript code?
+console.log(typeof typeof null);
+The output is "string".
+
+Explanation:
+
+The typeof null will give us "object". This is in double quotes so, it is a string.
+
+Next, the typeof "object" will give us "string".
+
+Hence, the final answer is "string".
+
+Q10: What is the use of Void(0) in JavaScript?
+Void(0) is used to prevent a page from refreshing when used with hyperlinks.
+
+In the following example we have a hyperlink which when clicked will not refresh the page or jump to the top of the page.
+
+<a href="javascript:void(0);" ondblclick="alert('Hello World')">Double click me</a>
+
+
+
+What is the use of strict mode?
+"use strict", which forces a program to work under a “strict” operating context.
+"use strict" can be put at the beginning of the function body instead of the whole script.
+//ex:-
+'use strict';
+var value = "This is strict mode script!";
+console.log(value);
+//ex:2
+"use strict";
+x = 10;       // causes an error because x is not declared
+console.log(x);
+Example of the reserved words to declare variables:
+"use strict";
+var let = 10;
+console.log(let) // raises an error
+
+What is closure?
+Closures are mostly used in callbacks, such as timeouts, event handlers, and so on, as well as in modules.
+The closure is a function that accesses its lexical scope even executed outside of its lexical scope.
+A rule of thumb to identify a closure: if inside a function you see an alien variable (not defined inside that function),
+most likely that function is a closure because the alien variable is captured.
+Finally, a closure is a function that captures variables from its lexical scope. In simple words,
+the closure remembers the variables from the place where it is defined, no matter where it is executed.
+read more : https://dmitripavlutin.com/simple-explanation-of-javascript-closures/
+read more :https://www.freecodecamp.org/news/lets-learn-javascript-closures-66feb44f6a44/
+very important :  https://www.humankode.com/javascript/javascript-closures-made-easy
+
+
+Event Bubbling or Event Capturing?
+There are two ways of event propagation in the HTML DOM, bubbling and capturing.
+Event propagation is a way of defining the element order when an event occurs. If you have a <p> element inside a <div> element, and the user clicks on the <p> element
+which element's "click" event should be handled first?
+In bubbling the inner most element's event is handled first and then the outer: the <p> element's click event is handled first, then the <div> element's click event.
+In capturing the outer most element's event is handled first and then the inner: the <div> element's click event will be handled first, then the <p> element's click event.
+With the addEventListener() method you can specify the propagation type by using the "useCapture" parameter:
+syntax:-- element.addEventListener(event, function, useCapture);
+
+what is function scope and block scope ?
+Function scoped variables: A function scoped variable means that the variable defined within a function will not accessible from outside the function.
+Block scoped variables: A block scoped variable means that the variable defined within a block will not be accessible from outside the block.
+ex:-
+function hello(){
+    if (true) {
+        var a = "javascript";
+        let b = "c++";
+        const c ="pyhton";
+        console.log(a);   //javascript
+        console.log(b);   //c++
+        console.log(c);   //python
+    }
+    console.log("outside if statement");
+    console.log(a);       //javascript
+    console.log(b);      //ReferenceError: b is not defined
+    console.log(c);
+}
+hello()

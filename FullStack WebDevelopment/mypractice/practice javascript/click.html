@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="mytext">The buuton is clicked 0 times</h1>
+    <button id="btn">Click</button>
+
+    <script>
+        const text = document.getElementById("mytext");
+        const btn = document.getElementById("btn"); 
+        let count = 0;
+        btn.addEventListener("click",function () {
+            count++;
+                text.innerHTML = `The buuton is clicked ${count} times`
+                
+        })
+        text.addEventListener("mousemove", function(){
+            text.style = "color:red;background-color:green;";
+        });
+    </script>
+</body>
+</html>

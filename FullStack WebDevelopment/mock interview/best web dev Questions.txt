@@ -1,10 +1,118 @@
-Who and why maintain web standards ?
+what is utf-8 and why we write utf-8 in html header file ?
+https://blog.hubspot.com/website/what-is-utf-8
+https://deliciousbrains.com/how-unicode-works/
+https://unicode.org/emoji/charts/full-emoji-list.html
 
+Difference between async and defeer ?
+///Asynchronous///                                                                                                   ///Deferred///
+Asynchronous blocks the parsing of the page.	                                                          Deferred never block the page.
+Asynchronous scripts don’t wait for each other.
+So if a smaller script is second in the order, 
+it will be loaded before the previous longer one.	                                                   Deferred scripts maintain their relative order which means the first script will be loaded first while all other below it will have to wait.
+The execution of scripts begins by pause parsing.	                                                   However, the execution of scripts begins only after parsing is completely finished but before the documents’s DOMContentLoadedevent.
+
+
+what is closure ? how and why you would use one ?
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).
+In other words, a closure gives you access to an outer function's scope from an inner function.what is closure ? how and why you would use one ?
+
+difference between for each and map ?
+The main difference between map and forEach is that the map method returns a new array by applying the callback function on each element of an array,
+while the forEach method doesn't return anything. You can use the forEach method to mutate the source array, but this isn't really the way it's meant to be used
+
+what is the typical use case of anonymous function ?
+An anonymous function is not accessible after its initial creation, it can only be accessed by a variable it is stored in as a function as a value. 3. This function is useful for all scenarios. An anonymous function can be useful for creating IIFE(Immediately Invoked Function Expression)
+
+advantages of collapsing whitespace ?
+Collapsing white spaces decreases the transmission time between the server and the client because collapsing features remove unnecessary bytes that are occupied by the white spaces. By mistake, if you leave extra white space, the browser will ignore it and display the UI perfectly
+
+Responsive vs Adaptive Website Design ?
+Put simply, responsive is fluid and adapts to the size of the screen no matter what the target xdevice. Responsive uses CSS media queries to change styles based on the target device such as display type, width, height, etc., and only one of these is necessary for the responsive website to adapt to different screen sizes.
+
+Adaptive design, on the other hand, uses static layouts based on breakpoints that don’t respond once they’re initially loaded.
+
+what is opacity in css?
+The opacity-level describes the transparency-level, where 1 is not transparent at all, 0.5 is 50% see-through, and 0 is completely transparent
+
+what is translate() in css ?
+The translate() CSS function repositions an element in the horizontal and/or vertical directions. Its result is a <transform-function> data type.
+
+difference between <i> and <em> tag in html ?
+The main difference between these two tag is that the <em> tag semantically emphasizes on the important word or section of words while <i> tag is just offset text conventionally styled in italic to show alternative mood or voice
+
+### what is calc() in html ?
+The calc() CSS function lets you perform calculations when specifying CSS property values. It can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed.
+ex:-  width: calc(2em * 5);
+
+
+The web storage is more secure and large amounts of data can be stored locally on the client-side web browser. All the data is stored in key-value pairs. 
+
+In HTML5 there are two types of web storage API.
+
+localStorage
+SessionStorage
+localStorage: It is used to store data on the client-side. It has no expiration time, so the data in the LocalStorage exists always till the user manually deletes it.
+Syntax:
+For storing data in web storage: The key and value both should be string or number;
+
+how do i restore the default value of a property?
+In short, there's no easy way to restore to default values to whatever a browser uses . The closest option is to use the 'initial' property value, which will restore it to the default CSS values, rather than the browser's default style
+
+What is CSS preprocessor Sass?
+A CSS preprocessor is a scripting language that extends CSS by allowing developers to write code in one language and then compile it into CSS. Sass is perhaps the most popular preprocessor around right now, but other well-known examples include Less and Stylus
+
+how can be the gap under the image removed ?
+trick 1:    The most commonly used solution is used to change the display property of the <img> tag inside the <div> container from default 'inline' value to 'block' using display : block property.
+trick 2 :   vertical-align: bottom; or we can do
+trick 3:    line-height: 0%;  we can use ony one of this trick
+
+
+### what attribute we use when we want to open a link on another page ?
+The target attribute set to _blank, which tells the browser to open the link in a new tab/window, depending on the browser's settings
+The rel attribute set to noreferrer noopener to prevent possible malicious attacks from the pages you link to
+
+What is the advantage of grouping several checkboxes together?
+An inline frame (iframe) is a HTML element that loads another HTML page within the document. It essentially puts another webpage within the parent page. They are commonly used for advertisements, embedded videos, web analytics and interactive content. 
+
+what are iframe ?
+An inline frame (iframe) is a HTML element that loads another HTML page within the document.
+It essentially puts another webpage within the parent page. They are commonly used for advertisements, embedded videos, web analytics and interactive content.
+
+### what are html Attributes ?
+All HTML elements can have attributes
+Attributes provide additional information about elements
+Attributes are always specified in the start tag
+Attributes usually come in name/value pairs like: name="value"
+
+### What are entities inn html ?
+An HTML entity is a piece of text ("string") that begins with an ampersand (&) and ends with a semicolon (;) . Entities are frequently used to display reserved characte    e be interpreted as HTML code), and invisible characters (like non-breaking spaces). 
+Some special characters are reserved for use in HTML, meaning that your browser will parse them as HTML code. For example, if you use the less-than (<) sign, the browser interprets any text that follows as a tag.
+To display these characters as text, replace them with their corresponding character entities, as shown in the following table.
+
+&	&amp;	Interpreted as the beginning of an entity or character reference.
+<	&lt;	Interpreted as the beginning of a tag
+>	&gt;	Interpreted as the ending of a tag
+"	&quot;	Interpreted as the beginning and end of an attribute's value.
+
+### What are the limitatu=ions of css ?
+- css cannot perform logical operation like if else ,do while etc
+- we cannot read any file using css.
+- it cannot interact with database
+- css cannot request a webpage
+
+### what is void tag in html ?
+Most html elements have a start tag and an end tag that indicate where the element begins and where it ends .
+There is a group of elements that are exeptions to the rules the lements are called void and only have a start tag since they cannot contain any content
+
+### Who and why maintain web standards ?
 The W3C is the best known web standards body,
 WHATWG (who maintain the living standards for the HTML language),
 ECMA (who publish the standard for ECMAScript, which JavaScript is based on),
 Khronos (who publish technologies for 3D graphics, such as WebGL), 
 and others.
+
+### what is box-sizing border box do ?
+
 
 what is don't break the web ?
 
@@ -223,60 +331,65 @@ https://javascript.info/localstorage
 All about cookies ,session storage,localstorage ?
 https://www.xenonstack.com/insights/local-vs-session-storage-vs-cookie
 
+What is async and defer in js ?
+async and defer both load JavaScript asynchronously without render blocking, but async executes as soon as possible while defer runs in sequence toward the end of the loading process, just before the DOMContentLoaded event
+
+What is closure in js ?
 
 
+What is ARIA?
+ARIA is shorthand for Accessible Rich Internet Applications. ARIA is a set of attributes you can add to HTML elements that define ways to make web content and applications accessible to users with disabilities who use assistive technologies (AT). When accessibility issues cannot be managed with native HTML, ARIA can help bridge those gaps.
 
-Why don't we use www anymore to search websites?
+Types of selectors in css ?
+We can divide CSS selectors into five categories:
+*Simple selectors (select elements based on name, id, class)
+*Combinator selectors (select elements based on a specific relationship between them)
+*Pseudo-class selectors (select elements based on a certain state)
+*Pseudo-elements selectors (select and style a part of an element)
+*Attribute selectors (select elements based on an attribute or attribute value)
 
-Everybody is mixing various informations without really understanding the use and abandon of www.
-Here’s what I think to be the complete story, even if I’m not a technician of the world wide web consorsium.
-I simply used induction (reverse of deduction) to help me to figure out how things happened.
 
-TYPES OF FILES, PROTOCOLS, AND TECHNICS IN URL
+What are tags and attributes in html ?
 
-Firstly, Internet was not about seing pages: it was about sharing file system structures and e-mails. So, behind those to “types” of files,
-a protocol was used : FTP for file structure, and POP for emails (or an other ancestor).
-Then, in order to access those files, two technics were invented :
+HTML tags are used to hold the HTML element. HTML element holds the content. HTML attributes are used to describe the characteristic of an HTML element in detail. HTML tag starts with < and ends with > Whatever written within a HTML tag are HTML elements.
 
-- The first one consists in using a sub-domain. Domains and sub-domains work like this : the first level is on the right, and each sub-levels are added on the left. So, all you had to do was to add “ftp.” or “mail.” on the very left of the URL to specify the virtual separation of those different types of files on a domain, in order to trigger a “protocol” that would be used to read and transmit them.
+What is metadata in html ?
+The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data. <meta> tags always go inside the <head> element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.
 
-- The second technic was to add a header to the URL to explicitely specify the protocol, separately from the rest of the URL, like “ftp://”. It was historically preferred, as it makes the reading of the URL more easy to undestand.
+Map vs for each ?
+The main difference between map and forEach is that the map method returns a new array by applying the callback function on each element of an array, while the forEach method doesn't return anything. You can use the forEach method to mutate the source array, but this isn't really the way it's meant to be used.
+For more info:
+https://code.tutsplus.com/tutorials/javascript-map-vs-foreach-when-to-use-each-one--cms-38365
 
-But the possible overlap of the two technics with delay between implementations of one or the other, is possibly adding to the mystery of how things got complicated and blurry.
+What is event listener in js ?
+An event listener is a procedure in JavaScript that waits for an event to occur. The simple example of an event is a user clicking the mouse or pressing a key on the keyboard
 
-ARRIVING OF A NEW LANGUAGE TO READ DISTANT CONTENTS
+What is temporal dead zone ?
+What Exactly Is a Temporal Dead Zone in JavaScript? A temporal dead zone (TDZ) is the area of a block where a variable is inaccessible until the moment the computer completely initializes it with a value.
 
-One famous day (hurray!) came the idea to directly see the content of readable files, instead of just listing them. A language was invented, named HTML as for Hyper Text Markup Language, and a corresponding protocol named HTTP as for Hyper Text Transfert Protocol. The idea was to create a “web” of data around the world. So, as a sub-domain name corresponding to that protocol, “http” was created, that could be used in the first technic (URL part). But as the concept of “world wide web” became more and more famous, a second sub-domain was invented to illustrate that great idea : “www”. As a matter of fact, you can also use “http” as a part of the URL, as for exemple “http.yoursite.stuff” : it will work, this confirming that my story about sub-domain and protocol technics [possible] delay is probably true.
+What is HTML dom ?
+The HTML DOM is an Object Model for HTML. It defines:
+HTML elements as objects
+Properties for all HTML elements
+Methods for all HTML elements
+Events for all HTML elements
+The HTML DOM is an API (Programming Interface) for JavaScript:
+JavaScript can add/change/remove HTML elements
+JavaScript can add/change/remove HTML attributes
+JavaScript can add/change/remove CSS styles
+JavaScript can react to HTML events
+JavaScript can add/change/remove HTML events
+The HTML DOM (Document Object Model)
+When a web page is loaded, the browser creates a Document Object Model of the page.
+The HTML DOM model is constructed as a tree of Objects:
 
-I don’t know exactly how nor when things got done, but wether the two were created at the same time or not doesn’t change the general idea.
+### Display none vs visibility  hidden ?
+- Hiding an element can be done by setting the display property to none. The element will be hidden, and the page will be displayed as if the element is not there:
+visibility:hidden; also hides an element.
+However, the element will still take up the same space as before. The element will be hidden, but still affect the layout:
 
-Now, for the first technic, you had the possibility to use “http.” or “www.” followed by your domain name and the TDL (top domain level) like “.com”. Or, as a second technic to explicitely specifiy the protocol and render a more beautiful URL, you could add “http://” before the URL.
 
-MIXED USE OF TECHNICS IN URL
-
-So, everybody started trying “http://” in front of URL, as it was beautifying URLs. But as habits were deeply inlaid in our minds, and because the name of the protocol (http) was not the same as the sub-domain name preferred for it (www), while ftp or mail were kep in both applications, people kept using “www” in the URL, convinced that it has an absolute role when in fact it was offered to use one technic (http://) or the other (http. or www.).
-
-BEHIND THE SCENE
-
-Servers kept having the need to process URLs parts, and to check that the leftest part of the URL was or wasn’t indicating a protocol to use (www. , ftp. , etc). And this was (and still is) done independently from the explicite header of a protocol to transfert the URL with the web browser (http://, ftp://, etc).
-
-Because, if for instance you type “http://ftp.yourdomain.com”, the “ftp.” part is probably an error, and if not, it is simply a real part of your host adress : so the servers HAVE to process things independently, and CANNOT skip the verification process.
-
-BEAUTIFYING OF THE URL
-
-As web browsers tended to be vastly used for HTML purpose (the “web”), our web browsers finally came to a point where they hid the “http://” in front or URLs for us to be comfortable with the URL part without being disturbed. This leading to a strange feeling reinforcing the idea that we need “www” as a part of URLs.
-
-BEHIND THE SCENE #2
-
-Servers were still processing all kind of checkings of what is transmitted in URLs and various parameters that we aren’t even conscious of. Nothing never changed in the “host servers” : they were mainly used for HTML (and now PHP and other dynamic languages), and thus, URL parsing was still taking into account the possibility to use www or not if the header is specifying HTTP as a protocol.
-
-But the fact is that if for some reason they were NOT doing the job of “implementing” the “www” as a non-obligatory part of the URL (or any other conflicting rule), they were failing to deliver the content, and despite the use of a header to specify the HTTP protocol, requests arriving to a domain were simply dying and returning an error.
-
-“Why would people do such a stupid thing ?” would you say. Well, probably because they were thinking “arf, www is not useful anymore, let’s delete it”. Or a more probable and realist cause, is that a kind of contradiction in the rule appeared, were domain providers were trying to separate “www.yourdomain.com” from “yourdomain.com”, as if it would add an interest in the taxonomy, without finishing the job to process the HTTP correctly without the absolute presence of www in the URLs.
-
-I personally suspect the blurry about historical uses and obligations, in the evolution of the programmation habits itself, to be the responsible for that annoying but minor confusion.
-
-DISAPPEARING OF WWW
+### DISAPPEARING OF WWW ?
 
 Progressively, given that “http://” was always added in front or URLs typed in the browsers,
 and because treatment of“www” was correclty done,the use of “www” became less and less necessary and thus popular as part of URL.

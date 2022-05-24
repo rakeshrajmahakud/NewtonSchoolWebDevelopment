@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        div{
+            background-color: blueviolet;
+            height: 30%;
+            width: 20%;
+            padding: 50px;
+            border-radius: 5%;
+
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div>
+        <h1 id="h1">0</h1>
+        <button onclick="starttt()">start</button>
+        <button onclick="heloo()">stop</button>
+        <button onclick="reset()">reset</button>
+    </div>
+
+
+
+<!-- The clearInterval() method clears a timer set with the setInterval() method.
+Note
+To clear an interval, use the id returned from setInterval():
+myInterval = setInterval(function, milliseconds);
+Then you can to stop the execution by calling clearInterval():
+clearInterval(myInterval); -->
+
+    <script>
+        var my = setInterval(count,50);
+        var c = 0;
+        function count() {
+            document.getElementById("h1").innerText=c;
+            c++;
+        }
+
+        function heloo(){
+            clearInterval(my);
+        }
+        function starttt(){
+            my = setInterval(count,50);
+        }
+        function reset() {
+            clearInterval(my);
+            c= 0;
+            document.getElementById("h1").innerText=c;
+
+            
+        }
+    </script>
+</body>
+</html>

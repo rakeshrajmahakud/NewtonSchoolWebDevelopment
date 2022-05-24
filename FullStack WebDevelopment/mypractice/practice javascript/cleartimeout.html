@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">Stop</button>
+</head>
+<body>
+    <script>
+        // The clearTimeout() method clears a timer set with the setTimeout() method.
+        // Note
+        // To clear a timeout, use the id returned from setTimeout():
+        // myTimeout = setTimeout(function, milliseconds);
+        // Then you can to stop the execution by calling clearTimeout():
+        //    clearTimeout(myTimeout);
+        // ---------------------------------------------------------
+        
+        var my ;
+        function start() {
+            my = setTimeout(()=>{
+                document.write("<h1>HI my name is rakeshraj</h1>");
+            },2000)
+        }
+        function stop() {
+            my = clearTimeout((my));
+            alert("time out stopped....");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Grocery List</h1>
+<!--input fields -->
+    <label for="text">name</label>
+    <input type="text" name="text" id="item-name-input" placeholder="Enter name here" required></br>
+    <label for="text" >price</label>
+    <input type="number" id="item-price-input" placeholder="Enter price" required></br></br>
+    <button onclick="insertItem()">add</button>
+
+    <table id="myTable">
+            <tr>
+                <th>Sr. No.</th>
+                <th data-ns-test="item-name">Title</th>
+                <th data-ns-test="item-price">Price</th>
+            </tr>
+            <tr>
+                <td>Grand total</td>
+                <td>0</td>
+            </tr>
+    </table>
+
+    <script>
+        document.querySelector("[data-ns-test='item-price']")
+    </script>
+</body>
+</html>

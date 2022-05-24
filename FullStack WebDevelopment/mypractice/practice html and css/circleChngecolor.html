@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+html, body {
+  height:100%;
+  margin:0;
+}
+
+#container {
+  height:100%;
+  background:purple;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+}
+#test{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="test"></div>
+        <button id="btn" onclick="changecolor()">Change color</button>
+    </div>
+
+    
+    
+    
+    <script>
+        let circle = document.getElementById("test");
+        let btn = document.getElementById("btn");
+        function changecolor() {
+            let num = Math.floor(100000 + Math.random() * 900000);
+            console.log(num);
+            circle.style.backgroundColor = `#${num}`;
+        }
+        // changecolor()
+
+    </script>
+
+</body>
+</html>

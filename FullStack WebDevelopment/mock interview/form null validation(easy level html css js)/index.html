@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+
+
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aquamarine;
+
+        }
+        .sub-container{
+            width: 200px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sub-container">
+            <form action="">
+                <input type="text" id="text" placeholder="Enter name here" required><br>
+                <input type="password" id="password" placeholder="Enter password here" required><br>
+                <button type="submit" onclick="myfunc()">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        let x = document.getElementById("text");
+        let y = document.getElementById("password");
+        
+        function myfunc() {
+                if ((x.value == "" ) || (y.value == "")) {
+                alert("input or password field cannot be empty");
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Form validation</title>
+</head>
+<body>
+    <main>
+        <form action="">
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" id="firstname" placeholder="Enter your first name" required>
+            <br>
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" id="lastname"  placeholder="Enter your last name" required>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+            <br>
+            <label for="conPassword">Password</label>
+            <input type="password" name="conPassword" id="conPassword" required>
+            <br>
+            <input type="checkbox" name="checkbox" id="checkbox" onclick="checkfunc()">
+            <label for="checkbox">See password</label>
+            <br>
+            <button type="submit" id="btn">Submit</button>
+        </form>
+    </main>
+
+
+
+
+    <script src="./script.js">
+    </script>
+</body>
+</html>
