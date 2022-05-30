@@ -57,3 +57,26 @@ In Javascript, a closure is always created with the creation of a function. The 
 
 ### What is Lexical Scope in JavaScript?
 Lexical scope describes how nested (also known as "child") functions have access to variables defined in parent scopes.
+
+###  What is function expression and function Declaration ?
+
+- A function expression is very similar to and has almost the same syntax as a function declaration. The main difference between a function expression and a function declaration is the function name, which can be omitted in function expressions to create anonymous functions.
+
+  
+
+- A function expression can be used as an IIFE (Immediately Invoked Function Expression) which runs as soon as it is defined.
+
+- Function expressions in JavaScript are not hoisted, unlike function declarations. You can't use function expressions before you create them:
+
+  
+
+example:-
+
+    console.log(notHoisted) // undefined
+    // even though the variable name is hoisted, the definition 
+    isn't. so it's undefined.
+    notHoisted(); // TypeError: notHoisted is not a function
+    var notHoisted = function() {
+    console.log('bar');
+    };
+

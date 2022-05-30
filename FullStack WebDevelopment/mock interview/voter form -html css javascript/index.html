@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter's Page</title>
+    <style>
+        html,body{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            width: 300px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: darkgrey;
+            margin: 50px;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        input{
+            width: 50%;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid rgb(2, 2, 47);
+            background-color: blueviolet;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- You have to create a page whose title will be Voter's Page.
+ in which 3 parties are BJP, CONGRESS, and MNS. so you are to create a button for each. now after the page is created.
+ when I vote like a voter, then you have to tell how many people have voted for BJP, CONGRESS, 
+and how many people have voted for MNS.
+ there should be a button which name is submitted.
+when you click on the submit button result should be shown at the bottom of your page
+ like BJP got this...votes, congress got this... votes and MNS got this ....Votes
+also, try to calculate total votes -->
+
+
+        <div class="container">
+            <input type="button" id="bjp-btn" onclick="bjp()" value="BJP">
+            <input type="button" id="con-btn" onclick="con()" value="CONGRESS">
+            <input type="button" id="mns-btn" onclick="mns()" value="MNS">
+            <input type="button" id="submit" onclick="totalcountvote()" value="Total">
+            <h2 id="bjp-value">0</h2>
+            <h2 id="con-value">0</h2>
+            <h2 id="mns-value">0</h2>
+            <h2 id="total">0</h2>
+    
+        
+        </div>
+    <script>
+
+        let bjpCount = 0;
+        let conCount = 0;
+        let mnsCount= 0;
+        
+        function bjp() {
+            bjpCount++;
+            document.getElementById("bjp-value").innerText = bjpCount;
+        }
+        function con() {
+            conCount++;
+            document.getElementById("con-value").innerText = conCount;
+        }
+        function mns() {
+            mnsCount++;
+            document.getElementById("mns-value").innerText = mnsCount;
+        }
+        
+        function totalcountvote() {
+            
+            document.getElementById("total").innerText =  (bjpCount + conCount + mnsCount);
+            alert(x)
+            
+        }
+    </script>
+</body>
+</html>

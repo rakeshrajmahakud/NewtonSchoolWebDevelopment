@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    im
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body" style="display : flex; flex-direction:column;justify-content:center;align-items:center ;">
+    <h1>HII this is printable Document</h1>
+    <img src="./boy.svg" alt="boy-pic"><br><br><br>
+    <p style="text-align:justify; margin:2rem" id="print">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Quod, repellendus quam. Eius culpa quia necessitatibus harum iure.
+        Dolor id facilis, a expedita qui ea ad numquam fugit temporibus,
+        odio quisquam eos ut excepturi laborum voluptates pariatur nihil
+        asperiores consequatur aperiam illo, distinctio animi! Omnis,
+        dolorum tempore velit ex, dignissimos suscipit a deleniti nemo quod
+        praesentium, harum cupiditate? Voluptatibus nihil blanditiis debitis
+        quod fuga quidem esse ipsa accusamus velit voluptate error, sed, laudantium modi exercitationem!
+        Porro perferendis ratione saepe sequi ipsa? Tempora itaque repellendus dolorum quasi distinctio, iusto,
+        sit totam quaerat maxime exercitationem labore laudantium nisi modi commodi, reiciendis aspernatur optio!
+        Blanditiis ex laudantium expedita? Magnam, repellendus veniam culpa impedit ex ipsam voluptatum ut corrupti 
+        doloremque nisi? Ipsam, labore cupiditate fugiat quam error distinctio temporibus dolores eos, eveniet unde aut
+        minus cumque dignissimos ad sint doloribus explicabo, reiciendis in voluptatum suscipit! Tenetur veritatis voluptates
+        corrupti. Voluptatum delectus exercitationem dolores laudantium est asperiores eveniet excepturi eius iusto odio doloribus
+        magnam atque tenetur assumenda natus quia placeat nam explicabo earum, veritatis adipisci eaque quidem nihil. Porro corporis
+        a nostrum accusamus voluptatem ipsam deserunt reprehenderit vero assumenda quod aperiam magni fugit cupiditate deleniti nisi,
+        rerum tempora nihil hic? Nam eius quibusdam nihil repellat amet.
+    </p>
+    <button onclick="myprint()">print the text</button>
+
+
+    <script>
+        function myprint() {
+            let body = document.getElementById("body").innerHTML;
+            let data = document.getElementById("print").innerHTML;
+            //puting the text into body
+            document.getElementById("body").innerHTML = data;
+            window.print();    // this window .print fuction by default print the whole body for print a perticular part we need to replace th ebody data 
+            document.getElementById("body").innerHTML = body;
+            
+        }
+
+
+    </script>
+    
+</body>
+</html>

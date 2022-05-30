@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script type="text/javascript" src="exam.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body  >
+      <!-- <input id="button1" type="button" onclick="myfunction()" value="click me"> -->
+      <p id="demo"></p>
+
+    <h2>provided courses are --></h2>
+    <p>1. html</p>            <!--use it for switch case 2 -->
+    <p>2.css</p>
+    <p>3.javascript</p>
+    <p>4.mongodb</p>
+
+    <script>
+    //     var str1=10 + 5 +"hello"
+    //    // var str1="hello" + 19 + 50 ;
+    //    //document.getElementById("demo").innerHTML = ("I AM ABHISHEK");
+    //    document.getElementById("demo").innerHTML = 
+    //    "the value  is =" + str1 ;     
+
+    //-------------------objects----------------------// here we must define object name and properties or key value .
+      
+    // var student={
+    //     name:"rakesh",
+    //     surname:"mahakud",
+    //     percentage:75,
+    // };
+
+    // document.getElementById("demo").innerHTML = 
+    // student.name + " " + student.surname + " got =" + student.percentage;
+
+
+    //------------------arrays----------------------
+
+    // var students=["raj","rahul","ravi"];
+    // document.getElementById("demo").innerHTML = 
+    // "winner of the class exam is =  " + students[2];
+
+    //------java script variables 1 local variable, 2 global variable.--------
+    
+    // var v1="global";      // * we declare a global variable we can puut any name on "" .
+    // function f1(){        //WRITE THIS LINE ON body tag--->> onload="f1()"  
+    // var v2="local";
+    //     document.getElementById("demo").innerHTML =
+    //     "value of v1 is - " + v1 + "<br>" + 
+    //     "value of v2 is - " + v2 ;
+    // }                   
+    //                 //  * we can  call a variable name as identifier
+   
+    
+
+    // ------------CALCULATE AREA AND COMPARISON BETWEEN THEM-------------
+    // var length=parseInt(7);
+    // var width=parseInt(2);
+    // var rect=length * width;
+    // alert("area of rectangle is = " + rect);
+    // var side=parseInt(4);
+    // var squre=side * side;
+    // alert("area of squre is = " + squre);
+    // if (rect>squre) {
+    //   alert("rectangle is greater");
+      
+    // } else {
+    //   alert("squre is greater");
+    // }
+    
+
+    // ------------------print detail of a person----------------//
+    // function myfunction() {
+    //   var fname = prompt("ENTER YOUR FIRST NAME");
+    //   var lname = prompt("ENTER YOUR LAST NAME");
+    //   var pincode = prompt("ENTER OINCODE HERE");
+    //   var city = prompt("ENTER YOUR CITY NAME");
+    //   if (fname != null) {
+    //   alert("HELLO DEAR " + fname +" " + lname);
+    //   }
+    // document.getElementById("demo").innerHTML = 
+    // "hello" + fname +" " + lname + "<br>" +
+    // pincode + "<br>" + city ;
+    // }
+    
+    // //-------------logiical operatr----------------------------// 
+    // var a = true;
+    // var b = false;
+    // var result1 = (a&&b);
+    // var result2 = (a||b);
+    // var result3 = (!(a&&b));
+    // document.getElementById("demo").innerHTML =
+    // result1 + "<br>" + result2 + "<br>" + result3 ;
+
+
+    //.............if-else-if statement.............................//
+
+    // var message = "hii";
+    // if (message == "hello"){
+    //   document.write("hello world");
+      
+    // }
+    // else if (message == "hii") {
+    //   document.write("hii world");
+      
+    // }
+    // else{
+    //   document.write("thank you world");
+    
+    //................. [[[SWITCH CASE]]].........................//
+    // var day= 4;
+    // document.write("today is  ");
+    // switch (day) {
+    //   case 1: document.write("monday<br />");
+        
+    //     break;
+    //   case 2: document.write("tuesday<br />");
+      
+    //     break;
+    //   case 3: document.write("wednesday<br />");
+
+    //     break;
+    //   case 4: document.write("thursday<br />");
+    //     break;    
+    //   default:case 1: document.write("holiday<br />");
+    //     break;
+    // }
+
+
+    //----------switch case example 2............................//
+    // var text;
+    // var c = prompt("enter yor course here");
+    // var course= parseInt(c);
+    // switch (course) {
+    //   case 1: text="you selected html course";
+        
+    //    break;
+      
+    //   case 2: text="you selected css course";
+        
+    //    break;
+        
+    //   case 3: text="you selected javascript course";
+        
+    //    break;
+
+    //   case 4: text="you selected mongodb course";
+        
+    //    break;
+    //   default:text="plz enter right course";
+    //    break;
+    // }
+    // document.getElementById("demo").innerHTML=text;
+
+
+    // 0000000-----------Loops in javascript--------------000000000//
+    //---------------------------WHILE LOOP-----------------------//
+    // var n=0;
+    // while (n<10) {
+    //   document.write("number is : "+ n + "<br />");
+    //   n++;
+    //   }
+    //   document.write("loop stopped");
+    
+    //-------------------do while loop--------------------------// 
+    // var n=0;
+    // do {
+    //   document.write("number :" + n + "<br />");
+    //    n++;
+    // } while (n < 10);
+    //   document.write("loop stopped");
+    //-------------------------for loop----------------------//
+    // var n;
+    // for (n = 0; n < 20; n++) {
+    // document.write("number" + n);
+    // document.write("<br />");
+      
+    // }
+    // document.write("loop stopped");
+
+    //--------------for iin loop------------------------------//
+    // var student={
+    //   fname: "raj",
+    //   lname:"meheta",
+    //   age:20
+    // };
+    // var x;
+    // for (x in student) {
+    // document.write(student[x] + " ");
+        
+    //                   };
+    
+    //--------------breqk statement in loops----------------------//
+    //var i;
+    // for(i=0;i<10;i++)
+    // {
+    //   if(i===3)
+    //   break;         //it will ittrate all tge startement aftter this break statement executed
+    //   document.write(i + "<br />");
+
+    // }
+
+    //------------continue statement in loops ------- //
+
+    // var n=1;
+    // while (n<10) {
+    //   n=n+1;
+    //   if (n==5) { //it will skip the perticular itterate and continue other itterates
+    //     continue;
+        
+    //   }
+    //   document.write(n + "<br />");
+    // }
+
+    //---------labels in javascript---------------//
+
+    // var student = ["ravi","raj","rahul","prakash","dipika"];
+    // var text = " ";
+    // list:
+    // {
+    // text += student[0] + "<br />";
+    // text += student[1] + "<br />";
+    // text += student[2] + "<br />";
+    // break list;     //we add here label name with break statement
+    // text += student[3] + "<br />";
+    // text += student[4] + "<br />";
+    // }
+    // document.getElementById("demo").innerHTML=text;
+
+
+    //---------------functions in java script-----------//
+    // function sayhello() {                // before you run paste it on body tag >>>> onload="sayhello();"
+    //   alert("hello world");
+    // }
+
+            //example 2
+    // function tometer(k) {
+    //   return k*1000;                      // *here we can return our value of the function using return keyword and store function value using a variable
+    // }
+    // var x = tometer(7);
+    // document.getElementById("demo").innerHTML="the distance is = " + x + " meters.";
+
+
+    //------------------2.functiom as expression ----------//
+    // var x=function(k) {
+    //   return k*1000;
+    // };
+    // var y=x(5);
+    // document.getElementById("demo").innerHTML = 
+    // "disnatnce is = " + y + "meters";
+
+    //------------3.function parameters--------//
+    // function check(a,b) {
+    //   alert("a= " + a +" b= "+ b );
+    // }
+    // check(1);
+    // check(1,2);
+    // check(1,2,3);  // here 3 is extra argument so it will not print in the output
+
+
+//             //example2
+//     function sum() {
+//       var result = 0;
+//       for(var i = 0; i< arguments.length; i++)
+//       {
+//       result += arguments[i];
+//       }
+//     alert("sum  of the total number is = "+ result);
+//     }
+//     sum(2,4,8,12,13);
+//     sum(30,35);
+     </script>
+    
+</body>
+</html>

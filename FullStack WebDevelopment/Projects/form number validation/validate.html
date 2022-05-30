@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Enter your phoneNumber</h2>
+    <input type="text" id="text" onkeyup="val(this)">
+    <div id="ans"></div>
+
+
+    <script>
+        function val(elem) {
+            let x = document.getElementById("ans");
+            
+            if (isNaN(elem.value)) {
+                x.innerText = "Enter numbers only"
+            }
+            else{
+                x.innerText = "";
+                if (elem.value.length >10) {
+                    x.innerText = "Enter 10 dight number only"
+                }else{
+                    x.innerText = "";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

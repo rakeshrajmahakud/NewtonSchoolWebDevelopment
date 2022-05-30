@@ -1,0 +1,67 @@
+/* section p{
+    color: blue;
+} */
+
+/* div p{
+    color: green;
+} */
+
+/* article > p {
+    color: red;
+} */
+
+/* section{
+    border: 1px solid red;
+} */
+
+.redcolor{
+    color: red;
+}
+
+#minespecific{
+    color:aquamarine;
+    font-weight: bold;
+}
+
+a:hover{
+    color: red;
+}
+
+div:hover{
+    font-weight: bold;
+}
+
+p:first-child{
+    color: red;
+}
+
+p:last-child{
+    color: green;
+}
+
+div:first-child{
+    color: yellow
+}
+
+input:disabled{
+    border: 1px solid green;
+}
+
+input:required{
+    border: 1px solid red;
+}
+
+p::after{
+    content: " firstname";
+}
+
+div::before{
+    content: "LastName - ";
+}
+
+div::selection{
+    background-color: black;
+    color: green;
+}
+
+

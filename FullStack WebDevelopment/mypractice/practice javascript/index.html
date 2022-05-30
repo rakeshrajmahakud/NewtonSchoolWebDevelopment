@@ -8,16 +8,43 @@
 </head>
 <body>
     <!-- <button onclick="setinterval()">setInterval</button> -->
-
-
-
+   
     <p id="demo">10</p>
+
+    
+    <button onclick="this.style.display = 'none' ">click me to hide me</button> <!--just testig "this" ketword -->
+
+
+    <!-- screen.js file codes -->
+    <p id="availheight"></p>
+    <p id="screenheight"></p>
+    <p id="availwidth"></p>
+    <p id="screenwidth"></p>
+
+
+    <button onclick="changecolor(this)" >click me to change color</button>  <!-- //here this keyword send he whole button object --> 
+    <!-- -------------------------------------------------------------------------------------------------  -->
+   
+   
+   <script>
+        function changecolor(elem) {
+            elem.style.backgroundColor = "red";
+            
+        }
+    </script>
+    
+    <!-- js files  -->
     <script src="./script.js"></script>
     <script src="./lexical.js"></script>
     <script src="./varletconst.js"></script>
     <script src="./callback.js"></script>
     <script src="./stringmethods.js"></script>
     <script src="./setInterval.js"></script>
+    <script src="./this.js"></script>
+    <script src="./screen.js"></script>
+    <!-- <script src="./object.js"></script> -->
+
+
 
 </body>
 </html>

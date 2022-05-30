@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: azure;
+           
+        } */
+        #parent{
+            height: 400px;
+            width: 400px;
+            background-color: darkgray;
+            /* margin: 20px; */
+        }
+        #child{
+            width: 50px;
+            height: 50px;
+            background-color: blueviolet;
+            position: relative;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+    <button onclick="boxmove()">animate</button>
+
+    <script>
+        function boxmove() {
+            let ch = document.getElementById("child");
+            let pos = 0;
+            let anim = setInterval(move,5)
+            function move() {
+                if(pos == 350){
+                    clearInterval(anim);
+                }else{
+                    pos++;
+                    ch.style.top = pos+"px";
+                    ch.style.left = pos+"px";
+                }  
+            }
+        }
+
+    </script>
+</body>
+</html>

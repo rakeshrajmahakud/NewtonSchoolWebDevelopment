@@ -10,9 +10,9 @@
 
 
 // ex:
-clearInterval(myInterval);
-function setinterval() {
-    setInterval(()=>{
-        alert("hello world");
-    },1000);
-}
+// clearInterval(myInterval);
+// function setinterval() {
+//     setInterval(()=>{
+//         alert("hello world");
+//     },1000);
+// }

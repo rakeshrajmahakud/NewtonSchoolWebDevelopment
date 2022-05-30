@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <button class="for-text" onclick="showtext()">showtext</button>
+    <button class="for-tag" onclick="showtag()">showtextWithTag</button>
+    <div id="mydiv"></div>
+
+
+<!-- let myString = `<p>lorem loremlorem loremlorem </p>loremlorem <strong>loremlorem </strong>lorem`; -->
+    <script>
+        
+
+        function showtext(){
+            let x = document.getElementById("container")
+            x.innerText = "";
+            x.innerHTML ="<p>lorem loremlorem loremlorem </p>loremlorem <strong>loremlorem </strong>";
+            
+        }
+        function showtag() {
+            let x = document.getElementById("container")
+            x.innerHTML = "";
+            x.innerText = "<p>lorem loremlorem loremlorem </p>loremlorem <strong>loremlorem </strong>";
+            
+        }
+    </script>
+</body>
+</html>
