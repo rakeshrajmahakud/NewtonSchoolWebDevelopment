@@ -8,11 +8,40 @@
 //     }
 // }
 // person.calculate()
-var a= 5
-let obj1 = {
-    // a:5,
-    test1:function(){
-        console.log(this.a);
-    }
+
+
+
+// (function(){
+//     setTimeout(()=> console.log(1),2000);
+//     console.log(2);
+//     setTimeout(()=> console.log(3),0);
+//     console.log(4);
+
+// })();    //2,4, 3,1
+
+
+// const arr = [1,2,3,4,5,6,7]
+// let y =  arr.forEach(x =>  x*x)
+// let  x = arr.map(x => x*x)
+// console.log(y);  //undefined
+// console.log(x); // [1,4,9,16,25,36,49]
+
+console.log([]===[]);    //false
+console.log([] == []);    //false
+console.log(null === undefined);  // false
+console.log(null == undefined);   // true
+
+
+
+// -------------------------------------------
+
+function foo() {
+    let x =(y = 0);
+    // let x = 0;
+    // let y = 0;
+    x++;
+    y++;
+    return x;
 }
-obj1.test1()
+
+console.log(foo(),typeof x , typeof y);

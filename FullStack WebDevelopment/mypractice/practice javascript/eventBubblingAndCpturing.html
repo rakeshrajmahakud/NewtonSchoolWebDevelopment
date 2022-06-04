@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event bubbling and capturing (EVENT PROPAGATION)</title>
+</head>
+<body>
+    <div id="parent"> <button>i am outer</button> 
+        <div id="childone"> <button>i am inner</button>
+            <div id="innerchild"><button>i am inner most</button></div>
+        </div>
+    </div>
+
+
+ <!-- In the structure above, assume that a click event occurred in the innermost element.
+In capturing model, the event will be handled by the outer div first (click event handlers in the outer div will fire first), then in the innerl, then at the last in the target element, innermost
+In the bubbling model, the opposite will happen: the event will be first handled by the innermost div, then by the inner div, and at last by the outer div element. -->
+
+<!-- to stop the propagation we use event.stopPropagation() method ,also we can prevent multiple events listener attached to the same element for being executed using the stopImmrdiatePropagation() method  -->
+    <script>
+        let parent = document.getElementById("parent")
+        let child = document.getElementById("childone")
+        let innerchild = document.getElementById("innerchild")
+
+        
+        parent.addEventListener('click',()=>{
+            console.log("i am outer div");
+        })
+        
+        child.addEventListener('click',()=>{
+            console.log("i am inner div");
+        })
+        innerchild.addEventListener('click',(e)=>{
+            e.stopPropagation() // if we write this code then the event stops here 
+            console.log("i am innermost div");
+        })
+
+        innerchild.addEventListener('click',(e)=>{
+            e.stopImmediatePropagation() 
+            console.log("i am secod event for innermost div");
+        }
+
+
+        //here we can pass third para meter as ture if we want event trickling.
+        
+
+        
+    </script>
+</body>
+</html>

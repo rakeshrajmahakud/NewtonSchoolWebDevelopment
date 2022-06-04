@@ -61,6 +61,34 @@
 
 
 // -----------------------------------------
+/////some inteview qn snippets
+// function x() {
+//     var a = 7;
+//     console.log("hii bhai");
+//     return function () {
+//         console.log(a);
+
+//     }
+// }
+// // console.log(x()());  //hii bhai ,7,undefined
+
+
+// x()()  // hii bhai ,7    
+
+
+// ---------------------------------------
+
+function x() {
+    var a = 7;
+    function y() {
+        console.log(a);
+
+    }
+    a= 100;
+    return y;
+}
+
+x()()
 
 
 
@@ -68,11 +96,11 @@
 
 
 
-
-
-
-
-
-
-
+// function outer(){
+//     // let a =5;
+//     var b = 90;
+//     console.log(b);
+// }
+// outer()
+// console.log(b);
 

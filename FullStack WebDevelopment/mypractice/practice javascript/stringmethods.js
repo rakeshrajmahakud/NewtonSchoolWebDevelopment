@@ -281,9 +281,15 @@ This example slices out a portion of a string from position -12 to position -6: 
 
 
 
+
 // if you want to find any latter present at forst aand end ten you use 
 // startsWith()
 // endsWith()
 
 // it will replace word in a string
 // .replace("what to replace","what replace");
+
+//////match method:::::
+// let str = "hi my my My i"
+// let res = str.match(/my/gi)
+// console.log(res.length)

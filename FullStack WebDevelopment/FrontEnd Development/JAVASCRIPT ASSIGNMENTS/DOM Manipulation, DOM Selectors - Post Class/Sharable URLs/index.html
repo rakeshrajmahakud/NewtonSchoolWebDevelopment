@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h3 id="url">https://localhost:8080/</h3>
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" id="name"><br>
+        <label for="year">Graduation year:</label><br>
+        <input type="text" name="year" id="year"><br>
+        <button type="submit" id="button" onclick="result()">Submit</button>
+
+
+
+
+    <script>
+        
+        function result() {
+            let urlresult = document.querySelector("#url")
+            let name = document.querySelector("#name").value;
+            let year = document.querySelector("#year").value;
+            if (name == "" && year == "") {
+                return;
+            }
+            if (name == "") {
+                urlresult.innerHTML =  `https://localhost:8080/?year=${year}`;
+            }else if(year == "")
+                urlresult.innerHTML =  `https://localhost:8080/?name=${name}`;
+            else{
+                urlresult.innerHTML =  `https://localhost:8080/?name=${name}&year=${year}`;
+            } 
+        }
+    </script>
+</body>
+</html>
