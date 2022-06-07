@@ -21,12 +21,14 @@ const people1 = {
 }
 const people2 = {
     name : "payal",
-    features : function(age,dob){
-        console.log(`hi my name is ${this.name} my age is ${age} and my dob is ${dob}`);
-    }
+    // features : function(age,dob){
+    //     console.log(`hi my name is ${this.name} my age is ${age} and my dob is ${dob}`);
+    // }
 }
 
 people1.features.apply(people2,[25,2001])
+
+
 
 
 // Bind method //////////////////////////////////

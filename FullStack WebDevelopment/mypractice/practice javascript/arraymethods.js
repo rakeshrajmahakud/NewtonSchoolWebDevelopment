@@ -107,3 +107,11 @@ char.forEach((element,index)=>{
 // ex 
 let quilified = [15,17,19,23,17]
 console.log(quilified.find(age => age>18));
+
+
+// match method ::::::::::::::::::::::::::::::
+// for regex matching 
+
+var re = /\w+\s/g;
+var str = 'fee fi fo fun';
+const [fee,fi,fo] = str.match(re);
