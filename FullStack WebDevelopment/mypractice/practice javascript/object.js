@@ -45,8 +45,18 @@ Car.prototype.age = function(){
 //it will return the age 
 console.log(car1.age());
 
-
-
-
-
 /////////////////////////////////////////////////
+// OBJECT METHODS 
+// Object.key method 
+let myobj = {
+    name : "rakeshraj",
+    
+    dob : 25,
+    address: "bhadrak"
+}
+
+
+console.log(Object.keys(myobj));   // [ 'name', 'dob', 'address' ]
+
+// obj.value method 
+console.log(Object.values(myobj));  //[ 'rakeshraj', 25, 'bhadrak' ]

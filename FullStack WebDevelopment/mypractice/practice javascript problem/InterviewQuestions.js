@@ -123,3 +123,48 @@
 
 // -------------------------------------------------------------
 
+// // maek a join funton like Array.join()////////////////////////////////
+
+// function myjoin(separator, ...data){
+//     let join = "";
+
+//     data.forEach((e,i)=>{
+//         if (i == data.length-1) {
+//             join =join+e;
+            
+//         }else{
+//             join = join+e+separator;
+//         }
+//     })
+
+//     return join;
+// }
+
+
+// console.log(myjoin("+","hii","my","name","is","raj"));
+
+
+// ---------------------------------------------------------
+// Q . store first 3 data into 3 variable and remaining on an array 
+
+// let arr = [1,2,3,4,5,6,7,8,9,10]
+
+// let [a,b,c,...remaining] = arr;
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(remaining);
+
+// --------------------------------------------------s
+//matchstick problem //
+function matchbox(house) {
+    if (house === 0) {
+        return 0;
+    }
+    else{
+        return ((house*6)-(house-1))
+    }
+}
+
+console.log(matchbox(1));
