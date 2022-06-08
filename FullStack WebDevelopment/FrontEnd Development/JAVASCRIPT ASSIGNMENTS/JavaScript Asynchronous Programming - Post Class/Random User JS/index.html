@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 400px;
+            height: auto;
+            background-color: rgb(1, 108, 69);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        section{
+            margin-top: 10px;
+
+        }
+        button{
+            width: 100px;
+            padding: 10px;
+            margin: 5px;
+        }
+        .mybtn{
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="imgContainer"></div>
+    </div>
+
+    <button class="mybtn" id="getUser">refresh</button>
+
+
+
+
+
+
+    <script>
+        function displayDetails(data){
+            let main = document.querySelector('.container');
+            let imgbox = document.querySelector('.imgContainer')
+            let img = document.createElement('img');
+            let name = document.createElement('h1');
+            let ageBtn = document.createElement('button');
+            let emailBtn = document.createElement('button');
+            let phnBtn = document.createElement('button');
+            let section = document.createElement('section');
+            let refresh = document.querySelector('.mybtn');
+
+
+            ageBtn.setAttribute('data-attr','age');
+            ageBtn.innerText = "age";
+
+            emailBtn.setAttribute('data-attr','email');
+            emailBtn.innerText = "email"
+
+            phnBtn.setAttribute('data-attr','phone');
+            phnBtn.innerText = "phone"
+
+            img.src = data.results[0].picture.large;
+            name.innerText = data.results[0].name.first +" "+ data.results[0].name.last;
+            imgbox.append(img)
+            main.append(imgbox,name,ageBtn,emailBtn,phnBtn,section,refresh);
+           
+            ageBtn.addEventListener('click',()=>{
+                section.innerText =  data.results[0].dob.age;
+            })
+
+            emailBtn.addEventListener('click',()=>{
+                section.innerText =  data.results[0].email;
+            })
+            
+            phnBtn.addEventListener('click',()=>{
+                section.innerText =  data.results[0].phone;
+            })
+
+            refresh.addEventListener('click',()=>{
+                window.location.reload();
+            })
+
+        }
+
+        //calling the api 
+
+            fetch('https://randomuser.me/api/')
+            .then((res)=>{
+                return res.json();
+            })
+            .then((e)=>{
+
+                //for checking 
+                console.log(e.results[0]);
+                console.log(e.results[0].name.first);
+                console.log(e.results[0].name.last);
+                console.log(e.results[0].picture.large);
+                console.log(e.results[0].dob.age);
+
+                
+                displayDetails(e);
+            })
+
+    </script>
+</body>
+</html>
