@@ -1,0 +1,153 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* .calculator{
+align-items: center;
+
+} */
+#input{
+  height: 35px;
+  margin-bottom: 8px;
+
+}
+#block0{
+  color: rgb(65, 21, 21);
+  padding: 5px 21px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#block1{
+  color: rgb(65, 21, 21);
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#block2{
+  color: rgb(65, 21, 21);
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#block3{
+  color: rgb(65, 21, 21);
+  padding: 5px 21px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#block4{
+  color: rgb(65, 21, 21);
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#block5{
+  color: rgb(65, 21, 21);
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#block6{
+  color: rgb(65, 21, 21);
+  padding: 5px 21px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#block7{
+  color: rgb(65, 21, 21);
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#block8{
+  color: rgb(65, 21, 21);
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#block9{
+  color: rgb(65, 21, 21);
+  padding: 5px 21px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#plus{
+  color: rgb(65, 21, 21);
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#minus{
+  color: rgb(65, 21, 21);
+  padding: 5px 21.4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#divide{
+  color: rgb(65, 21, 21);
+  padding: 5px 23.5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#multiply{
+  color: rgb(65, 21, 21);
+  padding: 5px 21.3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#dot{
+  color: rgb(65, 21, 21);
+  padding: 5px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#clr{
+  color: rgb(65, 21, 21);
+  padding: 5px 33px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#ans{
+  color: rgb(65, 21, 21);
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

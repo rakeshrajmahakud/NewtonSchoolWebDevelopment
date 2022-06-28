@@ -26,10 +26,10 @@
 // console.log(y);  //undefined
 // console.log(x); // [1,4,9,16,25,36,49]
 
-console.log([]===[]);    //false
-console.log([] == []);    //false
-console.log(null === undefined);  // false
-console.log(null == undefined);   // true
+// console.log([]===[]);    //false
+// console.log([] == []);    //false
+// console.log(null === undefined);  // false
+// console.log(null == undefined);   // true
 
 
 
@@ -45,3 +45,25 @@ function foo() {
 }
 
 console.log(foo(),typeof x , typeof y);
+
+
+
+// ------------------------------------------
+// extract all values in JSON object 
+
+
+// var obj = {a:{b:1},c:2,d:3,e:{m:{r:5}}};
+
+// function printvalues(obj) {
+//     for (let k in obj){
+//         if (obj[k] instanceof Object) {
+//             printvalues(obj[k]);
+//         }else{
+//             console.log(obj[k])
+//         }
+//     }
+// }
+
+// printvalues(obj);
+
+

@@ -6,15 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clock</title>
     <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+        }
         h1{
-            font-size: 100px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 70px;
             text-align: center;
-            color: brown;
+            color: rgb(255, 254, 254);
+            margin: 50px;
+        }
+        .container{
+            width: auto;
+            height: auto;
+            background-color: rgb(4, 4, 40);
+            box-shadow: 25px 25px 35px 1px rgb(22, 14, 45);
         }
     </style>
 </head>
 <body>
-    <h1 id="myclock"> h : m : s : AM</h1>
+    <div class="container">
+        <h1 id="myclock"> h : m : s : AM</h1>
+    </div>
+    
 
 
     <script>
@@ -23,14 +42,18 @@
             let h = d.getHours();
             let m = d.getMinutes();
             let s = d.getSeconds();
-            let session = "AM";
+            let session = "";
 
             //TO MAINTAIN 12 HOUR ZONE
+
+            session = h>=12 ? "PM" : "AM";
+            // if (h>=12) {
+            //     session = "PM"
+            // }else{
+            //     session = "AM"
+            // }
             if (h>12) {
                 h = h-12;
-            }
-            if (h>=12) {
-                session = "PM";
             }
 
             h = h<10 ? "0"+h : h;

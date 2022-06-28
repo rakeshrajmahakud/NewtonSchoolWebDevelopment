@@ -51,4 +51,5 @@ function details(age,mob,address){
 // bind method binds the external function to an object  and store that methods to any variable to call when required
 let data = details.bind(user1);
 
-data(25,555555,'odisha ,bhadrak')
+data(25,555555,'odisha' ,'bhadrak');
+

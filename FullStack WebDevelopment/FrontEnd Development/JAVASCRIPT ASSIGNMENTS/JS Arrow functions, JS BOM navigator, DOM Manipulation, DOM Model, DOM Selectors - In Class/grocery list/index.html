@@ -1,0 +1,157 @@
+
+<!-- 
+    Grocery list
+One of the important features of a grocery list is the calculation of the Grand Total. Grand Total is just the sum of the price of all items.
+Details
+We have created a small version of a grocery list that consists of some times.
+
+The price of each is written in a tr element with a data attribute data-ns-test=price.
+
+There is a Total button your task is to add functionality to this button.
+
+On click event of this button, the function calcTotal is be executed
+
+Write a code in calcTotal to calculate the cost of all items and write it inside a row and append it to the table.
+
+The new row should have two column one with Text Grand Total and other should contain the total price along with a attribute data-ns-test=grandTotal for example <tr><td>Grand Total</td><td data-ns-test="grandTotal">303</td></tr>
+
+If calcTotal is executed for the second time you have to update the last row with the new grand total price .
+
+Follow the example given at the end.
+
+
+Acceptance criteria
+
+Correct Grand Total.
+
+Removal of previous Grand Total.
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Do not edit this you need to use JS to scrap prices and display their sum -->
+    <h1>Grocery List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Title</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Item-1</td>
+                <td data-ns-test="price">100</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Item-2</td>
+                <td data-ns-test="price">200</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Item-3</td>
+                <td data-ns-test="price">2</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Item-4</td>
+                <td data-ns-test="price">1</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onClick='calcTotal()'>Total</button>
+
+
+    <script>
+        // function calcTotal() {
+//     let sum=0;
+//     let row=5;
+//     let price=document.querySelectorAll('[data-ns-test="price"]');
+//     for(let i=0;i<price.length;i++)
+//     {
+//         sum += parseFloat(price[i].innerText);
+
+//     }
+//     let table=document.getElementById("table");
+//     let length=table.rows.length;
+//     if(length==6)
+//     {
+//         document.getElementById("insertedRow").remove();
+//     }
+//     let newrow=table.insertRow(row);
+//     let data1=newrow.insertCell(0);
+//     let data2=newrow.insertCell(1);
+//     data1.innerHTML="Grand Total";
+//     data2.innerHTML=sum;
+//     newrow.setAttribute("id","insertedRow")
+//     data2.setAttribute("data-ns-test","grandTotal");
+    
+// }
+
+
+// ----------------------------------------------
+// var table=document.querySelector("tbody");
+// var row=table.insertRow();
+// var data1=row.insertCell(0);
+// var data2=row.insertCell(1);
+// function calcTotal() {
+//      var total=0;
+//      var ele=document.querySelectorAll('[data-ns-test=price]');   
+//     for(var i=0;i<ele.length;i++)
+//     {
+//         total=total+Number(ele[i].innerHTML);
+//     }
+//     data1.innerHTML="GrandTotal"
+//     data2.innerHTML=total;
+//     data2.setAttribute("data-ns-test","grandTotal");
+// }
+
+// ---------------------------------------------------
+var count = 0;
+
+function calcTotal() {
+
+    let table = document.querySelector('tbody');
+
+    if (count > 0) {
+
+        table.removeChild(table.children[table.children.length - 1]);
+
+    }
+
+    let prices = document.querySelectorAll('[data-ns-test=price]');
+    let sum = 0;
+
+    for (let i = 0; i < prices.length; i++) {
+
+        sum += parseInt(prices[i].textContent);
+
+    }
+    let lastRow = document.createElement('tr');
+    let child0 = document.createElement("td");
+    let child = document.createElement("td");
+
+    child0.textContent = "Grand Total";
+    child.textContent = sum;
+
+    lastRow.appendChild(child0);
+    lastRow.appendChild(child);
+    table.appendChild(lastRow);
+    
+    child.setAttribute('data-ns-test', 'grandTotal');
+    count++;
+
+}
+    </script>
+</body>
+</html>

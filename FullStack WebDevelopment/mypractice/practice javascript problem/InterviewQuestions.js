@@ -19,6 +19,7 @@
 
 // console.log("5"*3);
 
+
 // Q4-
 
 // (function(){
@@ -55,6 +56,10 @@
 // }
 
 // console.log(foo(),typeof x , typeof y);
+// note - here if we do not define y then javascript automatically attach it ti window object 
+// so if you log it like console.log(window.y) then you will get the output 
+// check out this article to understand better 
+// https://dmitripavlutin.com/simple-but-tricky-javascript-interview-questions/#3-eagle-eye-test
 // ------------------------------------------
 // Q7
 // const arr = ["a","b","c","d"];
@@ -158,13 +163,179 @@
 
 // --------------------------------------------------s
 //matchstick problem //
-function matchbox(house) {
-    if (house === 0) {
-        return 0;
-    }
-    else{
-        return ((house*6)-(house-1))
-    }
-}
+// function matchbox(house) {
+//     if (house === 0) {
+//         return 0;
+//     }
+//     else{
+//         return ((house*6)-(house-1))
+//     }
+// }
 
-console.log(matchbox(1));
+// console.log(matchbox(1));
+
+// -------------------------------------------------
+// how to over settimeout prining pattern in this qn without using let keyword 
+
+// for(var i =1; i<6;i++){
+//     setTimeout((i)=>{
+//         console.log(i);
+//     },1000,i)
+// }
+
+// just pass the i in that settimeout function and our problem is solved 
+// -----------------------------------------------------------------------
+// function diff(a,b) {
+//     return a-b
+    
+// }
+
+// console.log(diff('5',2));
+// ----------------------------------------------------------------------------
+// var x = 2;
+// var fun = function() {
+//     console.log(x);
+//     var x = 3;
+// }
+// fun()    //undefined
+// ---------------------------------------------------------------
+
+// console.log(0.1+0.2==0.3);  //false 
+
+//thsi is false because With decimal fractions, this floating-point number system causes some rounding errors in JavaScript.
+// ----------------------------------------
+
+// function sum(a,b) {
+//     return a+b
+// }
+// let x = sum('1',2);
+// console.log(x);   //12
+// ----------------------------------------
+
+// let a = 0;
+// let b = false;
+
+// console.log(a == b);  //true
+// console.log(a === b);  //false   this is because a is a number type and b is boolean type
+// console.log(typeof a);
+// console.log(typeof b);
+// ------------------------------------
+// (function () {
+//     setTimeout(()=> console.log(1),2000);
+//     console.log(2);
+//     setTimeout(()=> console.log(3),0);
+//     console.log(4);
+// })();   // 2 4 3 1
+
+// -----------------------------------
+// function fnc1() {
+//     setTimeout(()=>{
+//         console.log(x);
+//         console.log(y);
+//     },3000);
+//     var x = 2;
+//     var y = 12;
+// }
+// fnc1()
+// ------------------------------------
+// var x = 10;
+// if (true) {
+//     var x = 5;
+//     console.log(x);  //5
+// }
+// console.log(x);  //5
+
+// ----------------------------------
+
+// for(var i = 0 ; i <= 5 ; i++){
+//     setTimeout(()=>{
+//         console.log(i);
+//     },i*1000)
+// }   
+
+//------------------------------------\
+// let x = [1,2,3,3,4,5,9,3]
+// let y = new Set(x)
+// console.log([...y]);
+// --------------------------------------
+// currying //////////////////////////////////
+
+// function add(...x) {
+
+//     return function (...y) {
+//         return function(){
+//             let sum= 0 ;
+//             x.map((a)=>{
+//                 sum = sum+a;
+//             })
+//             y.map((b)=>{
+//                 sum = sum+b;
+//             })
+//             console.log(sum);
+//         }
+//     }
+// }
+// add(2,3)(3,4,5)();
+
+// ----------------------------------------
+// count  even length length elements in an array 
+// let myarr = [12,345,2,6,7896];
+
+// let count = 0;
+// myarr.forEach((e)=>{
+//     count = ((e%2) == 0) ? count+1 : count;
+// })
+// console.log(count);
+
+// approach 2:-
+
+// let res  = myarr.join(" ").split(" ");
+// console.log(res);
+// count = 0;
+// for (let  i= 0;  i< res.length; i++) {
+//     if ((res[i].length) %2 ==  0) {
+//         count++;
+//     }
+// }
+// console.log(count);
+// --------------------------------------------
+
+// const clothes = ['jacket', 't-shirt'];
+// clothes.length = 0;
+// console.log(clothes[0]); //undefined
+// console.log(clothes); //[]
+// console.log(clothes.length);  // 0
+
+// --------------------------------------------------
+// const clothes = ['jacket', 't-shirt'];
+// delete clothes[0]
+// console.log(clothes.length);  //2
+// -----------------------------------------------------
+
+// const length = 4;
+// const numbers = [];
+// for (var i = 0; i < length; i++);{
+//   numbers.push(i + 1);
+// }
+// console.log(numbers0; // [5]
+
+// ---------------------------------------------------------------
+// function foo(para) {
+//     return 
+//     [para] 
+// }
+
+// console.log(foo(5));  //undefiened
+// ----------------------------------------------------------
+// let i;
+// for (i = 0; i < 3; i++) {
+//   const log = () => {
+//     console.log(i);
+//   }
+//   setTimeout(log, 100);
+// }
+// ----------------------------------
+// 0.1 + 0.2 === 0.3 // => ???  0.30000000000000004
+
+// note :- visit this site for more info https://0.30000000000000004.com/
+// -------------------------------------

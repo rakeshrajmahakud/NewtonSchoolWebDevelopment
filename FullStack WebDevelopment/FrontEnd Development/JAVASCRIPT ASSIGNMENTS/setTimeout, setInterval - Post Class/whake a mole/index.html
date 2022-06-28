@@ -1,0 +1,59 @@
+<!-- 
+    Whack a mole
+Whack a mole is a game in which there is a mole in the grid and you have to hit it under a time limit as many times as you can.
+
+Specifications
+There has to be a grid of 9 cells. There has to be one mole (it can be an image) that keeps changing its position in the grids every second. The player has to hit the mole by clicking on the cell in which it appears. Every time the mouse click happens before the mole disappears, the score increases. There should be a timer running backwards.
+There should be two buttons- Start and Reset. The game starts when Start button is clicked and ends when the timer hits zero. If the user wants to Restart the game, they can press Reset button.
+1). An h1 tag with the text Whack a mole.
+2). An h3 tag with id="score" where your score of the game will be rendered.
+3). An h3 tag with id="time-left" where time left for the game will be rendered(should be greater than 10s initially).
+4). A start button and a reset button with id="start" and id="reset" respectively.
+5). The start button should start the game and the reset button should reset it.
+6). Make a grid with 9 squares each with the class name square.
+7). Take the interval of one second for a mole position change.
+8). The class name of the grid box should include the class name "mole" if the mole is rendered in that particular box.
+9). Only one box will contain the class name "mole" as only one mole will be rendered at a particular instant.
+10) Your score increases if you hit the mole with your mouse click when it's visible in the grid
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+     <title>Whack a mole</title>
+</head>
+<body>
+     <div class="container">
+          <h1>Whack a mole</h1>
+          <div class="score-timeLeft-container">
+               <p>Score:<h3 id="score"></h3></p>
+               <p>Time Left:<h3 id="time-left"></h3></p>
+          </div>
+          <div id="grid">
+               <div class="square"></div>
+               <div class="square"></div>
+               <div class="square"></div>
+               <div class="square"></div>
+               <div class="square mole">
+                    <img src="data:image/png;base64,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" id="mole-img">
+               </div>
+               <div class="square"></div>
+               <div class="square"></div>
+               <div class="square"></div>
+               <div class="square"></div>
+          </div>
+          <div class="buttons">
+               <button id="start">Start</button>
+               <button id="reset">Reset</button>
+          </div>
+     </div>
+     <script src="script.js"></script>
+</body>
+</html>

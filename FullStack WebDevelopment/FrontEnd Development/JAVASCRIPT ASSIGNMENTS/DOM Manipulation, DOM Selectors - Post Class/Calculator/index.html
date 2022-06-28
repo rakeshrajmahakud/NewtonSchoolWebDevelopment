@@ -1,0 +1,78 @@
+<!-- 
+    Create a basic calculator using HTML, CSS and JAVASCRIPT which perform simple +, - , /, * operations. Make it clean and pretty
+
+Acceptance Criteria:
+
+Create number buttons with id "block0" to "block9".
+
+Create buttons for operations with ids "plus", "minus", "multiply", "divide" for the respective operation.
+and make one clear button.
+
+Create button for decimal operations with id "dot" for respective operation.
+
+There should be a button that, on click, displays the answer. This button should have id="ans"
+
+There should be a reset button that, on click, clears the answer. This button should have id="clr"
+
+On division by 0, the answer should be 'Infinity'
+
+On division of 0/0 it should give 'NaN'
+
+The element where input/output is displayed should be of input type and have id="input". The value should get updated with every calculation
+Testcases
+
+ -->
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+ </head>
+ <body>
+    <div class="calculator">
+    <input type="text" id="input" disabled></br>
+    <button id="block0" onclick="dis('0')">0</button>
+    <button id="block1" onclick="dis('1')">1</button>
+    <button id="block2" onclick="dis('2')">2</button></br>
+    <button id="block3" onclick="dis('3')">3</button>
+    <button id="block4" onclick="dis('4')">4</button>
+    <button id="block5" onclick="dis('5')">5</button></br>
+    <button id="block6" onclick="dis('6')">6</button>
+    <button id="block7" onclick="dis('7')">7</button>
+    <button id="block8" onclick="dis('8')">8</button></br>
+    <button id="block9" onclick="dis('9')">9</button>
+    <button id="plus" onclick="dis('+')">+</button>
+    <button id="minus" onclick="dis('-')">-</button></br>
+    <button id="divide" onclick="dis('/')">/</button>
+    <button id="multiply" onclick="dis('*')">*</button>
+    <button id="dot" onclick="dis('.')">.</button></br>
+    <button id="clr" onclick="clr()">Reset</button>
+    <button id="ans" onclick="solve()">=</button>
+</div>
+
+
+
+    <script>
+        function dis(val)
+        {
+        document.getElementById("input").value+=val;
+        }
+        function solve()
+        {
+        let x = document.getElementById("input").value;
+        let y = eval(x)
+        document.getElementById("input").value = y;
+        }
+        function clr()
+        {
+        document.getElementById("input").value = "";
+        }
+    </script>
+</body>
+ </html>

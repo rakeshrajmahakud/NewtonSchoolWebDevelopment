@@ -1,3 +1,27 @@
+// syntax for declaring a promise 
+
+const p = new Promise((res,rej)=>{
+    res("this is resolve area");
+    rej("this is reject area")
+})
+
+// handle a promise 
+p.then((data)=>{
+    //resolved(success data ) handled here
+    console.log(data);
+})
+.catch((data)=>{
+
+    //error(reject) hamdled here
+    console.log(data);
+})
+.finally(()=>{
+    console.log("this block executes no matter the promises resolved or rejects");
+})
+
+
+// ------------------------------------------------------------------------------------
+
 let userObj = new Promise((resolve,reject)=>{
     setTimeout(()=>{
         let rollNum = [1,2,3,4,5,6,7,8,9];

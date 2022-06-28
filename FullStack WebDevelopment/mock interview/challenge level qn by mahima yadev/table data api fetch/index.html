@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,td{
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>desc</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+
+        </tbody>
+    </table>
+    <script>
+        async function getData() {
+           const response =  await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita%');
+           let data = await response.json()
+           console.log(data);
+           console.log(data.drinks);
+           length = data.drinks.length;
+           console.log(length);
+           let temp = "";
+           for(let i = 0;i<length;i++){
+            temp += `
+                <tr>
+                    <td>${data.drinks[i].strDrink}</td>
+                    <td>${data.drinks[i].strInstructions}</td>
+                </tr>
+                `
+           }
+           document.getElementById("data").innerHTML=temp;
+        }
+
+        getData()
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
