@@ -43,6 +43,8 @@ for (let name of people) {
     console.log(name);
 }
 
+
+
 // ----see the difference --------------------------
 
 for (let name in people) {

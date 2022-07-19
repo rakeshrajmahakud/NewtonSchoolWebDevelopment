@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I am not a Robot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="random()">
+    <div class="images">
+      <img src="./images/1.jpg" alt="dog" class="1" onclick="clickOnImg(event)" />
+      <img src="./images/2.jpg" alt="dog" class="2" onclick="clickOnImg(event)" />
+      <img src="./images/3.jpg" alt="dog" class="3" onclick="clickOnImg(event)" />
+      <img src="./images/4.jpg" alt="dog" class="4" onclick="clickOnImg(event)" />
+      <img src="./images/5.jpg" alt="dog" class="5" onclick="clickOnImg(event)" />
+      <img src="./images/1.jpg" alt="dog" class="6" onclick="clickOnImg(event)" />
+    </div>
+    
+    <h3>
+      Please click on the identical tiles to verify that you are not a robot
+    </h3>
+    <div class="reset_verify">
+      <button id="reset">Reset</button>
+      <button id="btn">Verify</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

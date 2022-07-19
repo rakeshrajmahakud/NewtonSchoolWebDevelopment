@@ -87,10 +87,10 @@ const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
 
 // forEach()::::::::::::::::::::::::::::;;;;
-let char  = ["a","b","a","c","b"];
-char.forEach((element,index)=>{
-    console.log(`${element} - ${index} - ${char.indexOf(element)}`);
-})
+// let char  = ["a","b","a","c","b"];
+// char.forEach((element,index)=>{
+//     console.log(`${element} - ${index} - ${char.indexOf(element)}`);
+// })
 
 
 // Resuce method:::::::::::::::::::::::::::::
@@ -105,13 +105,39 @@ char.forEach((element,index)=>{
 
 // find method :::::::::::::::::::::::::::::::::::::::
 // ex 
-let quilified = [15,17,19,23,17]
-console.log(quilified.find(age => age>18));
+// let quilified = [15,17,19,23,17]
+// console.log(quilified.find(age => age>18));
 
 
 // match method ::::::::::::::::::::::::::::::
 // for regex matching 
 
-var re = /\w+\s/g;
-var str = 'fee fi fo fun';
-const [fee,fi,fo] = str.match(re);
+// var re = /\w+\s/g;
+// var str = 'fee fi fo fun';
+// const [fee,fi,fo] = str.match(re);
+
+// ::::::::::::::::::::::::::::::::::::::::::::
+    // very vecy important
+// ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+// JavaScript Array flat() method
+// convert any depth arry into 1d array
+// ES2019 introduced the Array.prototype.flat() method that creates a new array with all the elements of the subarrays concatenated to it recursively up to a specified depth.
+// The following shows the syntax of the flat() method:
+// let newArray = arrayObject.flat([depth])
+// ex :-
+const myarr = [1,2,[3,4,5]];
+const flatarr = myarr.flat();
+console.log(flatarr);
+
+// ex2 :-
+const myarr2 = [1,2,[3,4,5,[7,8,9,[10,11,12]]]];
+const flatarr2 = myarr2.flat(3);  // here we write the arry is what type like 2d or any d in our case it is 3d so we pass 3
+console.log(flatarr2);
+
+// ex3:-
+// if we dont know the array depth in that case we pass infinity in that method 
+const myar3 = [1,2,[3,[4,5,[6,7,[8,[9,[99,[10]]]]]]]];
+const flatarr3 = myar3.flat(Infinity);
+console.log(flatarr3);
+// ----------------------------------------
+

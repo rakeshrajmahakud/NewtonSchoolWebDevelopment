@@ -339,3 +339,39 @@
 
 // note :- visit this site for more info https://0.30000000000000004.com/
 // -------------------------------------
+
+// console.log(3+2+"7");   //57
+
+// console.log(~3);  //4
+// console.log(~4);  //5
+
+// -----------------------------------------------
+// var y = 1;
+// if (function f() {}) {
+
+// y += typeof f;
+// }
+// console.log(y)   //1undefined
+// ==============================================
+
+// (function() {
+// var a = b = 5;
+// })();
+// console.log(b);   //5
+
+// =======================================
+// var arr = [1,2,3,4,5]
+// var obj = {"numbers" : arr};
+// console.log(arr === obj.numbers);  //true
+// arr.push(6);
+// console.log(obj);   // [ 1, 2, 3, 4, 5, 6 ]
+// arr.length = 0;
+// var newarr = [0,0,0,0,0];
+// arr.push(...newarr);
+// console.log(arr);  // true
+
+// ============================================
+
+
+
+

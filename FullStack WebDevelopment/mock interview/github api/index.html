@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+        <h1>Github api to fetch user details</h1>
+    <script>
+        const users = ['rakeshrajmahakud', 'victoria-lo', 'max-programming', 'atapas'];
+
+
+        const fetchData = user => {
+            return fetch(`https://api.github.com/users/${user}`);
+        }
+
+        fetchData('rakeshrajmahakud').then(res => res.json()).then(e => console.log(e))
+
+        const loopFetches = () => {
+            for (let i = 0; i < users.length; i++) {
+                console.log(`*** Fetching details of ${users[i]} ***`);
+                const response = fetchData(users[i]);
+                response.then(response => {
+                    response.json().then(user => {
+                        console.log(`${user.name} is ${user.bio} has ${user.public_repos} public repos and ${user.followers} followers`);
+                    });
+                });
+            }
+        }
+        loopFetches()
+    </script>
+</body>
+
+</html>

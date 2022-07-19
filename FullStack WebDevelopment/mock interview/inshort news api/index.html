@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function getData() {
+            const value = await fetch('https://inshorts.deta.dev/news?category=science');
+            let value1 = await value.json();
+            // document.body.innerText = value1;
+            let value2 = value1.data;
+            // console.log(value2);
+            let value3 = value2.map((e)=>{
+                 const{id,author,content,date,time} = e ;
+                //  console.log(id,author,content,date,time);
+                 return {id,author,content,date,time}
+            })
+            return value3;
+        }
+
+        let data = await getData();
+        console.log(data);
+        console.log("hii");
+
+    </script>
+</body>
+</html>

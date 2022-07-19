@@ -144,3 +144,34 @@ Array.prototype.convertToObject = function(){
 }
 
 console.log(cities.convertToObject());
+
+
+// :::::::::::::::::::::::::::::::object prototype :::::::::::::::::::::::::::::::::
+// So what to do if we want to add new properties at later stage to a function which will be shared across all the instances?
+// The answer is Prototype.
+// The prototype is an object that is associated with every functions and objects by default in JavaScript, where function's prototype property is accessible and modifiable and object's prototype property (aka attribute) is not visible.
+// The prototype object is special type of enumerable object to which additional properties can be attached to it which will be shared across all the instances of it's constructor function.
+// So, use prototype property of a function in the above example in order to have age properties across all the objects as shown below.
+
+function Student() {
+    this.name = 'John';
+    this.gender = 'M';
+}
+
+Student.prototype.age = 15;
+Student.prototype.details = function(){      //here arrow function not works with "this" keyword
+    console.log(this.name + " "+this.gender);
+}
+var studObj1 = new Student();
+console.log(studObj1.age); // 15
+
+var studObj2 = new Student();
+console.log(studObj2.age); // 15
+studObj1.details()
+
+// ****Every object which is created using literal syntax or constructor syntax with the new keyword, 
+// includes __proto__ property that points to prototype object of a function that created this object.
+
+console.log(Student.prototype === studObj1.__proto__ );  //true
+
+// As you can see in the above example, Function's prototype property can be accessed using <function-name>.prototype. However, an object (instance) does not expose prototype property, instead you can access it using __proto__.
