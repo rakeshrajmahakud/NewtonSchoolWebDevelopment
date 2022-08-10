@@ -371,7 +371,55 @@
 // console.log(arr);  // true
 
 // ============================================
+// Q GENERATE AN ALPHABET ARRAY ?
+
+// const alphabet = [...Array(26)].map((v,i)=>v=String.fromCharCode(i+65));
+// console.log(alphabet);
 
 
+// ----------------------------------------------------\
+// var myfunc = {
+//     showArgs(){
+//         console.log(arguments);
+//         console.log(arguments.length);
+//     }
+// }
 
+// myfunc.showArgs(11,22,33,44)   //[Arguments] { '0': 11, '1': 22, '2': 33, '3': 44 }
+//                                //4
+
+
+// -----------------------------------------------------
+// function passbyValue(a1) {
+//     a1= 5;
+// }
+
+// let a = 15;
+// passbyValue(a);
+// console.log(a);     //15
+
+// function passbyRef(newarr) {
+//     newarr[1] = 0;
+// }
+
+// let arr = [1,2,3,4,5];
+// passbyRef(arr);
+// console.log(arr);  //[1,0,3,4,5]
+// ------------------------------------------------
+// console.log(p);   // undefined
+// p=10
+// console.log(p);  //10
+// var p =10;
+
+// ------------------------------
+// x()  // hello1
+// var x = function() {
+//     console.log("hello");
+// }
+// x()   //hello
+// function x() {
+//     console.log("hello1");
+// }     
+// x()   //hello
+// ----------------------------------------
 
