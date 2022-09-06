@@ -1,0 +1,11 @@
+https://shrtco.de/			--------url shorter
+
+https://geo.ipify.org/                  --------         ip tracker api 
+https://leafletjs.com/                  --------         for generating maps for ip trackers
+
+https://docs.github.com/en/rest/users/users#get-a-user   ----------github api
+
+
+
+
+https://rapidapi.com/newbAPIOfficial/api/planets-info-by-newbapi/                    -----------planet info api

@@ -67,3 +67,4 @@ console.log(user);  //{ name: 'peter', address: { city: 'gurgram', state: 'up' }
 // but still we have some problem .how it convert a inner nethod or date object 
 // json.stringify cannot work perfectly so it remove those function or methods 
 // and unfortunetly  there is no straight forword solution available but we can use external libreary called **LOADDASH** or ittrate each property and copy ,its actually lengthy proecss 
+

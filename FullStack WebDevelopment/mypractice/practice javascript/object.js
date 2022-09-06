@@ -7,7 +7,7 @@
 //     "my arr" : [1,2,3,4,5,6,7],
 // }
 
-// //if we want to wite key in multiple word with space then we use doubke or single quotetion mark
+// //if we want to write key in multiple word with space then we use doubke or single quotetion mark
 // // and we can access throuth the squre bracket 
 // console.log(user["my arr"][0]); //accessing the first index 
 // console.log(user["my mob"]);
@@ -81,13 +81,27 @@
     
 // }
 // -----------------------------------
-let obj = {
-    mame :"rakesheaj",
-    dob :"1995",
-    area : 'bhadrak'
+// let obj = {
+//     mame :"rakesheaj",
+//     dob :"1995",
+//     area : 'bhadrak'
+// }
+// //by using for in loop
+// for(let x in obj){
+//     console.log("object keys ----->> "+ x);
+//     console.log("object values ----->> "+obj[x]);
+// }
+
+// --------------------------------------
+// delete  selected keys in an object 
+let obj = {name : "rakeshraj",hobby : ["crucket","singing","cooking"],address :{at: 'ankapada'},developer : true};
+let arr = ['name','hobby','developer'];
+
+function deleteObject(obj,arr) {
+   for(let i = 0; i< arr.length;i++){
+        delete obj[arr[i]];
+   }
+
 }
-//by using for in loop
-for(let x in obj){
-    console.log("object keys ----->> "+ x);
-    console.log("object values ----->> "+obj[x]);
-}
+deleteObject(obj,arr)
+console.log(obj);
