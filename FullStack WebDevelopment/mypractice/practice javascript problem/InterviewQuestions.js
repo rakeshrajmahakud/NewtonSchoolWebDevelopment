@@ -602,5 +602,113 @@ function test() {
 // deleteObject(obj,arr)
 // console.log(obj);
 // -------------------------------------------
+// Qn:
+// var x = [1,2,3,4,5];
+// for (var i=0;i<x.length;i++){
+//     (function() {
+//     setTimeout(function(){
+//     console.log(x[i]);
+//     }, 1000);
+//     })(); 
+// }
+//op :-
+// undefined
+// undefined
+// undefined
+// undefined
+// undefined
+
+// solution :-
+// var x = [1,2,3,4,5];
+// for (var i=0;i<x.length;i++){
+//     (function() {
+//     setTimeout(function(i){
+//     console.log(x[i]);
+//     }, 1000,i);
+//     })(); 
+// }
 
 
+// ------------------------THIS AND FUNCTION-------------------------------
+
+// function Video(title) {   // this is a function constructor
+//     this.title= title;
+//     console.log(this);
+// }
+
+// const v = new Video("a")
+// console.log(v);     //'this' points to Video objecct not window because of 'new' keyword because it creates a new objectand the 'this' pnts to that object
+
+// ----------------------------
+// let myfunc = () => {
+//     console.log(this)
+// }
+
+// myfunc()   // in browser -> window object  in node empty object 
+
+// ---------------------------------
+
+// function myfinc() {
+//     console.log(this);
+// }
+
+// myfinc()  //in browser: window object, in node: - global object  
+// -----------------------------------------------------
+// function myfinc() {
+//     console.log(this);
+// }
+
+// new myfinc()  // it returns myfunc object 
+// -------------------------------------
+
+// let myfunc = () => {
+//     console.log(this);
+// }
+
+// let x = new myfunc()  // here we get n error because its a function expression so we cannot use new keyword here
+
+// -------------------------------------
+// const user = {
+//     name : 'rakeshraj',
+//     sum : () => {
+//         console.log(this);
+//     }
+// }
+
+// user.sum() //   in case of arrow function in case of browser here this points to window object and incase of node this oint to empty object
+// -------------------------------------
+// const user = {
+//     name : 'rakeshraj',
+//     sum : () => {
+//         ( ()=>{
+//             console.log(this);
+//         })()
+//         console.log(this);
+//     }
+// }
+// user.sum()  // in case of browser both the inner and the outer function points to window object
+// but in case of node both menthods points to empty object  
+// --------------------------------------------
+// const user = {
+//     name : 'rakeshraj',
+//     sum : function(){
+//         ( ()=>{
+//             console.log(this);
+//         })()
+//         console.log(this);
+//     }
+// }
+// user.sum()  // here in these two functions are points to user oject in case of browser as well as node.
+
+// -------------------------------------------
+// const user = {
+//     name : 'rakeshraj',
+//     sum : function(){
+//         ( function(){
+//             console.log(this);
+//         })()
+//         console.log(this);
+//     }
+// }
+// user.sum() // here in both window and browser case the first function points to user object and 
+// -----------------------------------
