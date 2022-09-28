@@ -551,17 +551,17 @@ console.log(x);
 
 // ----------------------------------------
 // variable shadowing 
-
-function test() {
-    var a = 10;
-    let b = 15;
-    if (true) {
-        let a = 'hii';
-        let b = 15;      // here we can define a let varibale with sae name but if we change it to var then it throws an error becuse it is illigal shadowing
-       
-        console.log(b);
-    }
-}
+// let x = 5;
+// function test() {
+//     var a = 10;
+//     let b = 15;
+//     if (true) {
+//         let a = 'hii';
+//        // var b = 15;      // here we can define a let varibale with same name but if we change it to var then it throws an error becuse it is illigal shadowing
+//        var x = 9;
+//         console.log(x);
+//     }
+// }
 // test()
 
 // -------------------------------------
@@ -712,3 +712,170 @@ function test() {
 // }
 // user.sum() // here in both window and browser case the first function points to user object and 
 // -----------------------------------
+
+// const a ={};
+// const b = {key : "b"};
+// const c = {key : "c"};
+// a[b] = 123;
+// a[c] = 423;
+
+// console.log(a);  // { '[object Object]': 423 }
+// -----------------------------------------
+// Q:-
+// let settings = {
+//     username : "rakesh",
+//     level : 24,
+//     health : 90,
+// }
+
+// const data = JSON.stringify(settings,['level','health'])
+// console.log(data);  //{"level":24,"health":90}
+
+// ----------------------------------------------------------------------
+// print all key value pair of an object tree ?   vv imp 
+// let obj ={
+//     name : 'rakeshraj',
+//     date : 1995,
+//     address : {
+//         at : 'ankapada',
+//         po:'biriadia',
+//         pin :753003,
+//         locality : {
+//             dist : 'bhadrak',
+//             mob : 996555555,
+//         },
+//         myarr : [1,2,3,4,5,6,7],
+//     }
+// }
+
+
+// function isObject(obj){        //function to check object or not 
+//     if (obj === null) {
+//         return false;
+//     }else if(typeof obj === 'object'){
+//         return true;
+//     }
+// }
+
+// function getData(obj) {       // extracting key value pair
+//     for (const val in obj) {
+//         if (isObject(obj[val])) {
+//             getData(obj[val])
+//         }else{
+//             console.log(val,obj[val]);
+//         }
+//     }
+// }
+
+// getData(obj);
+
+
+
+// ---------------------------------------------------------
+// how a closure can optimize time  :---(example)
+
+// function find(index) {
+//     let  a = [];
+//     for(let i =0 ; i< 1000000; i++){
+//         a[i] = i+i;
+//     }
+//     console.log(a[index]);
+// }
+
+// console.time("12")    
+// find(12);
+// console.timeEnd("12")
+
+// optimized code uisng closure below
+
+// function find() {
+//     let  a = [];
+//     for(let i =0 ; i< 1000000; i++){
+//         a[i] = i+i;
+//     }
+//     return function (index) {
+//         console.log(a[index]);
+//     }
+// }
+
+// //optimized 
+// const closure = find(12);
+// console.time("12")
+// closure(12);
+// console.timeEnd("12")
+
+// --------------------------------
+// how to slove this issue  of settimeout and for loop ?
+// sln :1 -
+// for(var i = 0 ; i< 3 ;i++){
+//     function innner(i) {    // here we use closure 
+//         setTimeout(function log(){
+//             console.log(i);
+//         },i*1000);
+//     }
+//     innner(i);
+// }
+
+// soln2:-(by passing 3rd parameter as argument on settimeout and argument in log fun)
+// for(var i = 0 ; i< 3 ;i++){     
+//     setTimeout(function log(i){
+//         console.log(i);
+//     },i*1000,i);
+// }
+
+// soln:3 :-  (by using let keyword)
+// for(let i = 0 ; i< 3 ;i++){     
+//     setTimeout(function log(){
+//         console.log(i);
+//     },i*1000);
+// }
+
+// -----------------------------------------
+
+// let a = 4;
+// let sum = 0;
+// for(let i = 0;i< 5;i++){
+//     sum = sum + a*(3&i)
+//     console.log(sum);
+// }
+// o/p- 4 12 24 24
+// ------------------------------------
+// let arr = [1,2,3,[4,5,[7,8,9,[11,12,23]]]];
+// // approach 1 by using array.flat method
+// console.log(arr.flat(3)); 
+
+// method 2 
+// function flatArray(arr) {
+//     for(let i = 0; i < arr.length;i++){
+//         if (Array.isArray(arr[i])) {
+//             flatArray(arr[i]);
+//         }
+//         else{
+//             console.log(arr[i]);
+//         }
+//     }
+// }
+
+// flatArray(arr);
+
+// ---------------------------------------------
+// covert a string to uppercase without using inbuilt method ? 
+
+let str = "my name is RAJ"
+
+function convertToUpperCase(str) {
+    let temp = ""
+    for(let i = 0; i< str.length;i++){
+        if (str.charCodeAt(i)>= 97 && str.charCodeAt(i)<=122) {
+            temp = temp + (String.fromCharCode(str.charCodeAt(i)-32));
+        }
+        else{
+            temp = temp + str[i];
+        }
+    }
+    return temp;
+}
+console.log(convertToUpperCase(str));
+
+
+
