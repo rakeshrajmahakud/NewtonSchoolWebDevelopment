@@ -217,3 +217,31 @@ class Person{
  student1.greet()
 
 //  ------------------------------------------------------------
+// class and constructor
+// class Myclass{
+//     constructor(name,age){
+//         this.myname = name;
+//         this.myage = age;
+//     }
+//     myfunc(){
+//         console.log(this.myname);
+//     }
+// }
+
+// let data = new Myclass("raj",25)
+// console.log(data);
+// data.myfunc()
+
+// // inheritance 
+// class PersonChild extends Myclass{   //it will inherit perporties of parent class which is "Myclass"
+//     constructor(){
+//         super("amar")
+//     }
+// }
+// let mydata = new PersonChild();
+// mydata.myfunc();  //amar
+
+
+
+
+
