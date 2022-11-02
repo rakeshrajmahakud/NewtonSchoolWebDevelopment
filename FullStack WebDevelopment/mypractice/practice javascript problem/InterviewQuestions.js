@@ -371,7 +371,7 @@
 // const alphabet = [...Array(26)].map((v,i)=>v=String.fromCharCode(i+65));
 // console.log(alphabet);
 
-// ----------------------------------------------------\
+// ----------------------------------------------------
 // var myfunc = {
 //     showArgs(){
 //         console.log(arguments);
@@ -563,7 +563,17 @@ console.log(x);
 //     }
 // }
 // test()
-
+// -------------------promise-------------------
+// const arr = [];
+// try{
+//     arr.push('try');
+//     throw new error();
+// }catch(e){
+//     arr.push('catch');
+// }finally{
+//     arr.push('finally');
+// }
+// console.log(arr);
 // -------------------------------------
 // infinite currying 
 // function sum(a) {
@@ -845,37 +855,562 @@ console.log(x);
 // console.log(arr.flat(3)); 
 
 // method 2 
-// function flatArray(arr) {
-//     for(let i = 0; i < arr.length;i++){
-//         if (Array.isArray(arr[i])) {
-//             flatArray(arr[i]);
-//         }
-//         else{
-//             console.log(arr[i]);
-//         }
-//     }
-// }
-
+function flatArray(arr) {
+    for(let i = 0; i < arr.length;i++){
+        if (Array.isArray(arr[i])) {
+            flatArray(arr[i]);
+        }
+        else{
+            console.log(arr[i]);
+        }
+    }
+   
+}
 // flatArray(arr);
+//method-3:-
+function flatArrayUsingForIn(arr) {
+    for(let i in arr){
+      if (Array.isArray(arr[i])) {
+        flatArrayUsingForIn(arr[i])
+      }else{
+        console.log(arr[i]);
+      }
+    }
+}
+// flatArrayUsingForIn(arr)
 
 // ---------------------------------------------
 // covert a string to uppercase without using inbuilt method ? 
 
-let str = "my name is RAJ"
+// let str = "my name is RAJ"
 
-function convertToUpperCase(str) {
-    let temp = ""
-    for(let i = 0; i< str.length;i++){
-        if (str.charCodeAt(i)>= 97 && str.charCodeAt(i)<=122) {
-            temp = temp + (String.fromCharCode(str.charCodeAt(i)-32));
-        }
-        else{
-            temp = temp + str[i];
-        }
+// function convertToUpperCase(str) {
+//     let temp = ""
+//     for(let i = 0; i< str.length;i++){
+//         if (str.charCodeAt(i)>= 97 && str.charCodeAt(i)<=122) {
+//             temp = temp + (String.fromCharCode(str.charCodeAt(i)-32));
+//         }
+//         else{
+//             temp = temp + str[i];
+//         }
+//     }
+//     return temp;
+// }
+// console.log(convertToUpperCase(str));
+
+// =========adding surname into name==========================================================
+// let arr = [{name:"raj"},{nmae:45}]
+
+// let res = arr.map((e)=>{
+//     let x= {...e}
+//     return x.name+"mahakud"
+// })
+// console.log(arr);
+// console.log(res);
+
+// =============================very very imp qns ==================
+const players = ["Wes", "Sarah", "Ryan", "Poppy"];
+const team = players;
+team[3] = "Lux";
+players.size = 4;
+
+// console.log(players);  //op  [ 'Wes', 'Sarah', 'Ryan', 'Lux', size: 4 ]
+
+// for (let player in players) {
+//     console.log(player);
+// }
+
+// op 
+// 0
+// 1
+// 2
+// 3
+// size
+
+// ===================very vey important javascript interview =================
+// 1. Sort the inventors by number of years they lived
+const inventors = [
+    { first: "Albert", last: "Einstein", year: 1879, passed: 1955 },
+    { first: "Isaac", last: "Newton", year: 1643, passed: 1727 },
+    { first: "Galileo", last: "Galilei", year: 1564, passed: 1642 },
+    { first: "Marie", last: "Curie", year: 1867, passed: 1934 },
+    { first: "Johannes", last: "Kepler", year: 1571, passed: 1630 },
+    { first: "Nicolaus", last: "Copernicus", year: 1473, passed: 1543 },
+    { first: "Max", last: "Planck", year: 1858, passed: 1947 },
+    { first: "Katherine", last: "Blodgett", year: 1898, passed: 1979 },
+    { first: "Ada", last: "Lovelace", year: 1815, passed: 1852 },
+    { first: "Sarah E.", last: "Goode", year: 1855, passed: 1905 },
+    { first: "Lise", last: "Meitner", year: 1878, passed: 1968 },
+    { first: "Hanna", last: "Hammarström", year: 1829, passed: 1909 }
+  ];  
+
+// let res = inventors.sort((a,b)=> (a.passed-a.year)-(b.passed-b.year))
+//  console.table(res);
+
+//by uisng manumal function
+// function sortUserYear(arr) {
+//   for(let i =0;i <arr.length;i++){
+//     for(let j = i; j<arr.length; j++){
+//       let first = arr[i].passed - arr[i].year
+//       let second = arr[j].passed - arr[j].year
+//       if (first>second) {
+//         //swap
+//         let temp = arr[i];
+//         arr[i] = arr[j];
+//         arr[j] = temp
+//       }
+//     }
+//   }
+// }
+// sortUserYear(inventors)
+// console.log(inventors);
+
+ //sorting the abobe array by using first name.
+    // let res1 = inventors.sort((a,b)=>{
+    //     a = a.first
+    //     b = b.first
+    //     if(a>b) return 1
+    //     else if(a<b) return -1
+    //     else return 0
+    // })
+//    console.log(res1);
+
+
+// ================================================
+    // 2. Sort based on last name
+  const people = [
+    "Bernhard, andra",
+    "Bethea, Erin",
+    "Becker, Carl",
+    "Bentsen, Lloyd",
+    "Beckett, Samuel",
+    "Blake, William",
+    "Berger, Ric",
+    "Beddoes, Mick",
+    "Beethoven, Ludwig",
+    "Belloc, Hilaire",
+    "Begin, Menachem",
+    "Bellow, Saul",
+    "Benchley, Robert",
+    "Blair, Robert",
+    "Benenson, Peter",
+    "Benjamin, Walter",
+    "Berlin, Irving",
+    "Benn, Tony",
+    "Benson, Leana",
+    "Bent, Silas",
+    "Berle, Milton",
+    "Berry, Halle",
+    "Biko, Steve",
+    "Beck, Glenn",
+    "Bergman, Ingmar",
+    "Black, Elk",
+    "Berio, Luciano",
+    "Berne, Eric",
+    "Berra, Yogi",
+    "Berry, Wendell",
+    "Bevan, Aneurin",
+    "Ben-Gurion, David",
+    "Bevel, Ken",
+    "Biden, Joseph",
+    "Bennington, Chester",
+    "Bierce, Ambrose",
+    "Billings, Josh",
+    "Birrell, Augustine",
+    "Blair, Tony",
+    "Beecher, Henry",
+    "Biondo, Frank"
+  ];
+
+  let  peopleresult = people.map((e)=>{
+    return e.split(", ")
+  }).sort((a,b)=> {
+    a = a[1].toLowerCase()
+    b = b[1].toLowerCase()
+    if(a > b) return 1
+    else if (a < b) return -1
+    else return 0
+  }).map((e)=>{
+    return e.join(' ')
+  })
+  
+//   console.log(peopleresult);
+
+
+// =======================================================
+// sort based on last name if lastname are same then sort by firstname
+
+const names = ["Shread Flanders", "Allan Flanders", "Eric Clapton"];
+
+const orderedNames = [...names].sort((name1,name2)=>{
+    name1 = name1.split(" ")
+    name2 = name2.split(" ")
+
+    let nameForSort1 = `${name1[1]} ${name1[0]}`
+    let nameForSort2 = `${name2[1]} ${name2[0]}`
+
+    if(nameForSort1>nameForSort2) return 1;
+    else if(nameForSort1<nameForSort2) return -1;
+    else return 0;
+
+    // method2
+    // return nameForSort1.localeCompare(nameForSort2);
+})
+
+// console.log(orderedNames);  op:-// [ 'Eric Clapton', 'Allan Flanders', 'Shread Flanders' ]
+
+
+// ------------------------------------------
+// let arr= ["1:2","2:3","1:7","4:2","2:2"];
+// // if first value of string is greater then second then  add 3 to total or if less then add 1 to total if equal then add zero
+
+// let total = arr.reduce((acc,e) => {
+//     let [x,y]  =e.split(":")
+//     if (+x > +y) {
+//         acc +=3
+//     }
+//     else if(+x < +y){
+//         acc += 1
+//     }
+
+//     return acc;
+// },0)
+// console.log(total);
+// ------------------------------------
+// let str = "rakeshraj mahakud"
+// let res = ""
+// for(let i = 0 ; i < str.length;i++){
+   
+//     if (i%2 === 0) {
+//             res +=  str[i].toUpperCase();
+//     }
+//     else{
+//         res += str[i].toLowerCase()
+//     }
+// }
+// console.log(res);
+
+// // sort an array by length
+// let strofarr = ["raj","rakeshraj","komal","hrikesh","dhaneswarkumar"]
+// strofarr.sort((a,b)=>{
+//     return a.length - b.length
+// })
+
+// console.log(strofarr);
+
+// ====================================================
+//printing all the nested values of an array
+// const userData = [
+//   { first: "Albert", last: "Einstein", year: 1879, passed: 1955 },
+//   { first: "Isaac", last: "Newton", passedyear:{year: 1, passed: 2}},
+//   { first: "Galileo", last: "Galilei", year: 1564, passed: 1642 },
+//   { first: "Marie", last: "Curie", year: 1867, passed: 1934 },
+//   { first: "Johannes", last: "Kepler", year: 1571, passed: 1630 },
+//   { first: "Nicolaus", last: "Copernicus", year: 1473, passed: 1543 },
+//   { first: "Max", last: "Planck", year: 1858, passed: 1947 }
+// ];  
+
+
+function getvalueFromUserData(data) {
+    for(let i in data){
+      if (typeof data[i] === "object") {
+         getvalueFromUserData(data[i]);
+      }else{
+        console.log(i,data[i]);
+      }
     }
-    return temp;
 }
-console.log(convertToUpperCase(str));
+
+// getvalueFromUserData(userData)
+
+// ==========================================================
+//reverse a string  without chaning its word position
+let str = "i am javascript"   // expetected op:- i ma tpircsavaj
+let arr = str.split("").reverse().join("").split(" ").reverse().join(" ")
+// console.log(arr);
+
+// manual function :--
+
+function reverseString(str) {
+  let len = str.length , reverseStr ='', result = '' ,resArr = [];
+
+  for(let i = len-1 ; i >= 0  ; i--){
+    reverseStr += str[i];
+  }
+  for(let j = 0 ; j < len ; j++){
+    if (reverseStr[j] == " ") {
+        resArr.push(result)
+        result = "";
+    }else{
+      result += reverseStr[j];
+      if(j+1 == len){
+        resArr.push(result);
+        result="";
+      }
+    }
+  }
+
+  for(k = resArr.length-1 ; k >= 0 ; k--){
+    result += resArr[k]+" ";
+  }
+  console.log(result);
+}
+// reverseString(str)
+
+
+// ===============================
+
+let stm1 = Symbol("one")
+let stm2 = Symbol("one")
+let stm3 = Symbol.for("one")
+let stm4 = Symbol.for("two")
+// console.log(stm1===stm2);  //false
+// console.log(stm3===stm4);  //false
+
+// =============================
+
+let obj = {
+  "key1": "data1",
+  "key2": "data2",
+  "key3": "data3"
+}
+
+function reverseKeyValue(obj) {
+  let tempObj = {}
+  for(let k in obj){
+    tempObj[obj[k]] = k;
+    // console.log(k);
+  }
+
+  console.log(tempObj);
+}
+
+// reverseKeyValue(obj)
+
+// ====================================================
+// qn :-// wap to filter the array first letter with the vowel and map to uppercase//
+let arrofvowel = ["a good day", "egg is good for health","move the machine","u are a genious"]
+
+function findVowel(str) {
+  return str.filter((e)=> {
+    return (e[0].toLowerCase() == "a") 
+    || (e[0].toLowerCase() == "e") 
+    || (e[0].toLowerCase() == "i")
+    || (e[0].toLowerCase() == "o")
+    || (e[0].toLowerCase() == "u")
+
+  }).map(e => e[0].toUpperCase()+e.slice(1))
+}
+
+// console.log(findVowel(arrofvowel))
+
+// =================================================
+// qn :-// wap to filter the array of objects  first letter with the vowel and map to uppercase//
+let arrpfobjVowel = [
+  {
+    name : "rakeshraj"
+  },
+  {
+    name : "abdullah"
+  },
+  {
+    name : "umesh"
+  },
+  {
+    name : "imran khan"
+  },
+  {
+    name : "kartik"
+  }
+]
+
+let res = [...arrpfobjVowel].filter((e)=>{
+  return (e.name.toLowerCase()[0] == "a") 
+  || (e.name.toLowerCase()[0] == "e") 
+  || (e.name.toLowerCase()[0] == "i")
+  || (e.name.toLowerCase()[0] == "o")
+  || (e.name.toLowerCase()[0] == "u")
+}).map(e => e.name[0].toUpperCase()+e.name.slice(1));
+
+// console.log(res);
+
+
+let repeatarr = [1,3,2,4,4,3,1,2,2,1,4,9,9];
+
+function extractdata(arr) {
+  let obj = {}
+  let totalsum = 0;
+  for(let i = 0 ; i < arr.length ; i++){
+    if (obj[arr[i]]) {
+      obj[arr[i]] +=1;
+    }else{
+      obj[arr[i]] = 1;
+    }
+  }
+  for(let k in obj){
+    let temp = new Array(obj[k])
+    let showarr = temp.fill(+k);
+    let sum = +k * obj[k]
+    totalsum +=sum
+    console.log(showarr,"=",sum);
+  }
+  console.log("totalsum = ",totalsum);
+
+}
+
+// extractdata(repeatarr)
+
+// -------------------------------------------
+//wjat is the op ?
+// let x = 3+2+"7"+3+"7"+2
+// console.log(x);
+// --------------------------------------------
 
 
 
+//remove leading zero form an ip address 
+let ip = "0009200.000016800.000001000.0001/24"
+
+let res2 = ip.split('.').map((octet)=> parseInt(octet)).join('.')
+// console.log(res2);
+
+// manual 2
+function removeZero(ip){
+  let str2 = ""
+  for(let i = 0; i <ip.length ; i++){
+    // console.log(ip[i]);
+    if (ip[i] == "/") {
+      break
+    }else{
+      str2 = str2+ip[i];
+    }
+  }
+  console.log(str2.split(".").map(Number).join("."));
+}
+
+
+//manual 1 
+let nums= ip.split('.');
+let finalip = parseInt(nums[0])
+for(let i = 1 ; i< nums.length;i++){
+  finalip += "."+parseInt(nums[i]);
+}
+// console.log(finalip);
+
+
+
+
+
+// manual code for deep copy
+
+// const createdeepCopy = (input) =>{
+//   if(typeof input !== 'object'){
+//       return input;
+//   }
+//   let copy = Array.isArray(input) ? [] : {};
+//   for(key in input){
+//       const value = input[key];
+//       copy[key] = createdeepCopy(value);
+//   }
+
+//   return copy;
+// }
+
+// let data = {
+//   name :"raj",
+//   address: {
+//       city: "bhubaneswar"
+//   }
+// }
+
+
+// console.log(createdeepCopy(data));
+
+
+
+// pass Arguments without parameter
+function myfunc(){
+  let sum = 0;
+  for(let element in arguments){
+      sum +=arguments[element];
+  };
+  return  sum;
+}
+//note :- "arguments" it is a pre defined keyword
+// :-this does not work with arraw fuction
+// console.log(myfunc(1,2,3));
+
+// --------------------------
+//example of closure
+
+function counter(i = 0) {
+  return function inner(){
+    return i++;
+  }
+}
+
+const count = counter()
+console.log(count()); //0
+console.log(count()); //1
+
+// -------------------------- 
+
+function hello(data){
+  console.log(" hello world "+data+this.name);
+}
+hello("r ")
+let obj1 = {
+  name: "kishir"
+}
+
+let ans = hello.bind(obj1,"maya")
+
+ans()
+
+
+// ===================================================
+
+
+// Q :- remove token property from object 
+// const obj = {
+//   hello: "world",
+//   token: "343sdmfkgfd",
+//   studentData: {
+//       name:"Ashim",
+//       lastName: "Kaushal",
+//       token: "xyzIdontknow"
+//   },
+//   someMoreData:{
+//     profession:"Software Engineer",
+//     otherDetails:{
+//       age:24,
+//       token:"495894gfgfgf"
+//     },
+//     token: {
+//       domain: "Backend",
+//       location: "Singapore"
+//     }
+//   }  
+// };
+
+// ans:-
+// function removeToken(obj){
+//   for(key in obj){
+//       if (typeof obj[key] == "object") {
+//           if(key == "token"){
+//               delete obj["token"];
+//           }
+//           removeToken(obj[key])
+//       }
+//       else{
+//           if (key == "token") {
+//               delete obj["token"];
+//           }
+//       }
+//   }
+// }
+
+// removeToken(obj)
+// console.log(obj);
+
+// -----------------------------------------------
