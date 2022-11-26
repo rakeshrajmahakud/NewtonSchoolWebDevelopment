@@ -1413,4 +1413,202 @@ ans()
 // removeToken(obj)
 // console.log(obj);
 
-// -----------------------------------------------
+// =============================cyruscloud Interview question=====================================
+// // sort name in assending order and again sort this array ages in decending orders
+// let student = [
+//     {
+//         "name" : "rakeshraj",
+//         "age" : 25,
+//     },
+//     {
+//         "name" : "amresh",
+//         "age" : 29,
+//     },
+//     {
+//         "name" : "sukesh",
+//         "age" : 12,
+//     },
+// ]
+
+// student.sort((a,b)=>{
+//     if(a.name>b.name) return 1;
+//     else if (a.name<b.name) return -1;
+//     else return 0;
+// })
+
+// student.sort((a,b)=> a.age-b.age);
+// console.log(student);
+
+
+// Q:- addon qn :- if the student age is greater then 18 
+// then add a property callsatus to it and return a new array
+
+// let modifiedStudent = student.map((e)=>{
+//     if(e.age>=18){
+//         return {...e,status : "adult"};
+//     }else{
+//         return e;
+//     }
+// })
+// console.log(modifiedStudent);
+
+// ======================================================
+// let  getdata = async ()=>{
+//     try{
+//         let res = await fetch('https://jsonplaceholder.typicode.com/users')
+//         let result = await  res.json();
+//         result.sort((a,b)=>{
+//             if(a.name>b.name) return 1;
+//             else if(a.name<b.name) return -1;
+//             else return 0;
+//         })
+//         console.log(result);
+//     }
+//     catch(e){
+//         console.log(e);
+//     }
+// } 
+// getdata()
+
+// ========================================================================
+// let data = [
+//   {
+//     "id": "0001",
+//     "type": "donut",
+//     "name": "Cake",
+//     "ppu": 0.55,
+//     "batters": {
+//       "batter": [
+//         {
+//           "id": "1001",
+//           "type": "Regular"
+//         },
+//         {
+//           "id": "1002",
+//           "type": "Chocolate"
+//         },
+//         {
+//           "id": "1003",
+//           "type": "Blueberry"
+//         },
+//         {
+//           "id": "1004",
+//           "type": "Devil's Food"
+//         }
+//       ]
+//     },
+//     "topping": [
+//       {
+//         "id": "5001",
+//         "type": "None"
+//       },
+//       {
+//         "id": "5002",
+//         "type": "Glazed"
+//       },
+//       {
+//         "id": "5005",
+//         "type": "Sugar"
+//       },
+//       {
+//         "id": "5007",
+//         "type": "Powdered Sugar"
+//       },
+//       {
+//         "id": "5006",
+//         "type": "Chocolate with Sprinkles"
+//       },
+//       {
+//         "id": "5003",
+//         "type": "Chocolate"
+//       },
+//       {
+//         "id": "5004",
+//         "type": "Maple"
+//       }
+//     ]
+//   },
+//   {
+//     "id": "0002",
+//     "type": "donut",
+//     "name": "Raised",
+//     "ppu": 0.55,
+//     "batters": {
+//       "batter": [
+//         {
+//           "id": "1001",
+//           "type": "Regular"
+//         }
+//       ]
+//     },
+//     "topping": [
+//       {
+//         "id": "5001",
+//         "type": "None"
+//       },
+//       {
+//         "id": "5002",
+//         "type": "Glazed"
+//       },
+//       {
+//         "id": "5005",
+//         "type": "Sugar"
+//       },
+//       {
+//         "id": "5003",
+//         "type": "Chocolate"
+//       },
+//       {
+//         "id": "5004",
+//         "type": "Maple"
+//       }
+//     ]
+//   },
+//   {
+//     "id": "0003",
+//     "type": "donut",
+//     "name": "Old Fashioned",
+//     "ppu": 0.55,
+//     "batters": {
+//       "batter": [
+//         {
+//           "id": "1001",
+//           "type": "Regular"
+//         },
+//         {
+//           "id": "1002",
+//           "type": "Chocolate"
+//         }
+//       ]
+//     },
+//     "topping": [
+//       {
+//         "id": "5001",
+//         "type": "None"
+//       },
+//       {
+//         "id": "5002",
+//         "type": "Glazed"
+//       },
+//       {
+//         "id": "5003",
+//         "type": "Chocolate"
+//       },
+//       {
+//         "id": "5004",
+//         "type": "Maple"
+//       }
+//     ]
+//   }
+// ]
+
+//   for(let i = 0 ; i< data.length; i++){
+//     data[i].batters.batter.sort((a,b)=>{
+//         if(a.id>b.id) return -1;
+//         else if (a.id<b.id) return 1;
+//         else return 0;
+//     });
+//   }
+
+//   console.log(data);
+// ===============================================================================
